@@ -1,0 +1,18 @@
+material letra/H
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture letra-h.png
+      }
+    }
+  }
+}
+
+  
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="new_H">
+    <static>true</static>
+    <link name="H_link">
+<visual name="visual_H">
+<cast_shadows>true</cast_shadows>
+        <geometry>
+   	<mesh>
+            <uri>model://H/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+          <uri>file://H/materials/scripts</uri>
+            <uri>file://H/materials/textures</uri>
+            <name>letra/H</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
