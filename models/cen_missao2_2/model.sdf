@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+    <model name="cen2">
+        <link name="cen2_link">
+            <pose>0 0 0 0 0 0</pose>
+            <collision name="cen2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cen_missao2_2/meshes/cen_ind_missao2_2.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="cen2_visual">
+                <cast_shadows>1</cast_shadows>
+                <geometry>
+                    <mesh>
+                        <uri>model://cen_missao2_2/meshes/cen_ind_missao2_2.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>
