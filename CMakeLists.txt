@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
 )
+# Depend on system install of Gazebo
+find_package(gazebo REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -106,7 +108,9 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES simulation
 #  CATKIN_DEPENDS gazebo_ros roscpp rospy
-#  DEPENDS system_lib
+  DEPENDS
+    roscpp
+    gazebo_ros
 )
 
 ###########
@@ -118,12 +122,19 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
 )
+link_directories(${GAZEBO_LIBRARY_DIRS})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/simulation.cpp
 # )
+
+# Dynamic Obstacle
+add_library(dynamic_obstacle SHARED plugins/dynamic_obstacle.cpp)
+target_link_libraries(dynamic_obstacle ${GAZEBO_LIBRARIES})
+
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
