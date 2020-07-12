@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="indoor_world">
+    <include><!-- Add in a light source -->
+      <uri>model://sun</uri>
+    </include>
+    <include><!-- Add in a ground -->
+      <uri>model://asphalt_plane</uri>
+    </include>
+    <include><!-- PRATELEIRAS -->
+      <static>true</static>
+      <uri>model://prateleira</uri>
+      <name>prateleira1</name>
+      <pose>4 2.5 0 0 0 1.570796325</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://prateleira</uri>
+      <name>prateleira2</name>
+      <pose>2 2.5 0 0 0 1.570796325</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://prateleira</uri>
+      <name>prateleira3</name>
+      <pose>4 4.5 0 0 0 1.570796325</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://prateleira</uri>
+      <name>prateleira4</name>
+      <pose>2 4.5 0 0 0 1.570796325</pose>
+    </include>
+    <include><!-- MESA -->
+      <static>true</static>
+      <uri>model://mesa</uri>
+      <name>mesa</name>
+      <pose>-1 3.5 0 0 0 1.570796325</pose>
+    </include>
+    <include><!-- RAMPAS -->
+      <static>true</static>
+      <uri>model://rampa</uri>
+      <name>rampa1</name>
+      <pose>-4 2 0.05 0 0 -1.570796325</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://rampa</uri>
+      <name>rampa3</name>
+      <pose>-4 4 0.05 0 0 -1.570796325</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://rampa</uri>
+      <name>rampa3</name>
+      <pose>-4 6 0.05 0 0 -1.570796325</pose>
+    </include>
+    <include><!-- DRONEPONTOS -->
+      <static>true</static>
+      <uri>model://droneponto</uri>
+      <name>droneponto1</name>
+      <pose>-4 1 0 0 0 0</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://droneponto</uri>
+      <name>droneponto2</name>
+      <pose>-4 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://droneponto</uri>
+      <name>droneponto3</name>
+      <pose>-4 5 0 0 0 0</pose>
+    </include>
+    <include>
+      <static>false</static>
+      <uri>model://iris</uri>
+      <name>iris1</name>
+      <pose>0 0 0.83 0 0 1.14</pose>
+    </include>
+<!--
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-10 0 6 0 0.3 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+        <track_visual>
+          <name>iris</name>
+          <use_model_frame>1</use_model_frame>
+        </track_visual>
+      </camera>
+    </gui>
+-->
+  </world>
+</sdf>

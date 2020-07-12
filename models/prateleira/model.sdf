@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="prateleira">
+    <static>true</static>
+    <link name="shelve_link">
+      <collision name="shelve_collision">
+        <geometry>
+          <mesh>
+            <uri>model://prateleira/meshes/prateleira.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="table_mesh">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://prateleira/meshes/prateleira.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

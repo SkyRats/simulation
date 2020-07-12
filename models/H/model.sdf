@@ -18,6 +18,13 @@
           </script>
         </material>
       </visual>
+      <collision name="collision_H">
+        <geometry>
+          <mesh>
+            <uri>model://H/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
   </model>
 </sdf>
