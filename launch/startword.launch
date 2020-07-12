@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <env name="GAZEBO_MODEL_PATH" value="$(find simulation)/models/:$(optenv GAZEBO_MODEL_PATH)"/>
-  <env name="GAZEBO_PLUGIN_PATH" value="$(find simulation)/../../devel/lib/:$(optenv GAZEBO_PLUGIN_PATH)"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find simulation)/models/:$(optenv GAZEBO_MODEL_PATH)" />
+  <env name="GAZEBO_PLUGIN_PATH" value="$(find simulation)/../../devel/lib/:$(optenv GAZEBO_PLUGIN_PATH)" />
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <!-- <arg name="world_name" value="$(find mavlink_sitl_gazebo)/worlds/empty.world"/> -->
+    <arg name="world_name" value="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
     <arg name="verbose" value="true" />
   </include>
 </launch>
