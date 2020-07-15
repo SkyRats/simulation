@@ -19,13 +19,12 @@
         </inertia>
       </inertial>
       
-      <gravity>1</gravity>
+      <gravity>0</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <enable_wind>0</enable_wind>
 
       <visual name='pole_visual'>
-        <!-- <pose frame=''>0 0 0 0 -0 0</pose> -->
         <geometry>
           <cylinder>
             <radius>0.25</radius>
@@ -51,16 +50,15 @@
       </visual>
 
       <collision name='collision'>
-        <laser_retro>0</laser_retro>
-        <max_contacts>10</max_contacts>
-        <!-- <pose frame=''>0 0 0 0 -0 0</pose> -->
+        <!-- <laser_retro>0</laser_retro> -->
+        <!-- <max_contacts>10</max_contacts> -->
         <geometry>
           <cylinder>
             <radius>0.25</radius>
             <length>2</length>
           </cylinder>
         </geometry>
-        <surface>
+        <!-- <surface>
           <friction>
             <ode>
               <mu>1</mu>
@@ -104,14 +102,17 @@
               <kd>1</kd>
             </bullet>
           </contact>
-        </surface>
+        </surface> -->
       </collision>
     </link>
 
     <static>0</static>
-    <allow_auto_disable>1</allow_auto_disable>
+    <!-- <allow_auto_disable>1</allow_auto_disable> -->
     
     <!-- Dynamic obstacle plugin -->
-    <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so"/>
+    <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+      <distance>5</distance>
+      <vel>2.0</vel>
+    </plugin>
   </model>
 </sdf>
