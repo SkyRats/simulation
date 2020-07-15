@@ -2,13 +2,13 @@
 <launch>
 
     <include file="$(find simulation)/launch/spawn_sdf.launch">
-        <arg name="x" value="1.5" />
+        <arg name="x" value="1" />
         <arg name="y" value="0" />
         <arg name="z" value="2.0" />
         <arg name="roll" value="1.57079" />
         <arg name="pitch" value="0" />
         <arg name="yaw" value="1.57079" />
-        <arg name="robot_name" value="simulation" />
+        <arg name="robot_name" value="h" />
         <arg name="sdf_robot_file" value="$(find simulation)/models/H/model.sdf" />
     </include>
 </launch>

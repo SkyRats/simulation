@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <world name="Heliporto">
+  <world name="H_world">
     <include>
       <uri>model://ground_plane</uri>
     </include>
     <include>
       <uri>model://sun</uri>
     </include>
-    <include>
+    <include><!-- DRONEPONTOS -->
+      <static>true</static>
       <uri>model://H</uri>
+      <name>H</name>
+      <pose>1 0 1 0 0 0</pose>
     </include>
   </world>
 </sdf>
