@@ -26,59 +26,37 @@ namespace gazebo
         // Amplitude points
         private: ignition::math::Vector3<double> point_0;
         private: ignition::math::Vector3<double> point_1;
+
+        // Point the model is moving to
         private: int goal_point = 1;
+
+        // Unit vector from point_0 to point_1
+        private: ignition::math::Vector3<double> direction;
+
+        // Distance from point_0 to point_1
+        private: double distance;
 
         // Translation velocity
         private: double vel;
-        
-        // // PID gains
-        // double linear_p = 100.0;
-        // double linear_i = 0.0;
-        // double linear_d = 0.0;
-        // double angular_p = 100.0;
-        // double angular_i = 0.0;
-        // double angular_d = 0.0;
-
-        // double linear_imax = 123456789.0;
-        // double angular_imax = 123456789.0;
-        // double maxForce = 123456789.0;
-        // double maxTorque = 123456789.0;
-
-        // // PID controllers
-        // common::PID controller_x; // Linear x
-        // common::PID controller_yy; // Angular y
-
-        // // PID setpoints
-        // ignition::math::Vector3<double> targetLinearVel;
-        // ignition::math::Vector3<double> targetAngularVel;
 
         // Called on model creation
         public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
         {
-            std::cerr << "Dynamic Obstacle plugin loaded to model [" << _parent->GetName() << "]" << std::endl;
-            
+            std::cout << "Dynamic Obstacle plugin loaded to model [" << _parent->GetName() << "]" << std::endl;
+
             // Store pointers
             this->model = _parent;
             this->link = this->model->GetLink("pole");
-
-            // Distance to oscillate
-            double distance = _sdf->Get<double>("distance", 5.0).first;
 
             // Translation velocity
             this->vel = _sdf->Get<double>("vel");
 
             // Extreme points
-            // this->point_0 = _sdf->Get<ignition::math::Vector3<double>>("point_0",link->WorldCoGPose().Pos());
-            this->point_0 = link->WorldCoGPose().Pos();
-            this->point_1 = this->point_0 + ignition::math::Vector3<double>(distance, 0.0, 0.0);
+            this->point_0 = _sdf->Get<ignition::math::Vector3<double>>("point_0", link->WorldCoGPose().Pos()).first;
+            this->point_1 = _sdf->Get<ignition::math::Vector3<double>>("point_1", this->point_0 + ignition::math::Vector3<double>(5.0, 0.0, 0.0)).first;
 
-            // // Add a PID controller for the DOFs needed
-            // controller_x = common::PID(linear_p, linear_i, linear_d, linear_imax, -linear_imax, maxForce, -maxForce);
-            // controller_yy = common::PID(angular_p, angular_i, angular_d, angular_imax, -angular_imax, maxTorque, -maxTorque);
-
-            // // Setpoint velocities
-            // this->targetLinearVel.X() = 2.0;
-            // this->targetAngularVel.Y() = 0.0;
+            this->direction = (this->point_1 - this->point_0).Normalized();
+            this->distance = this->point_0.Distance(point_1);
 
             // Listen to the update event.
             // This event is broadcast every simulation iteration.
@@ -88,16 +66,19 @@ namespace gazebo
          // Called by the world update start event
         public: void OnUpdate()
         {
-            // Decide the direction the model should move in
             double v;
             ignition::math::Vector3<double> curr_pos = this->link->WorldCoGPose().Pos();
+            // Coordinate of the model in the direction between point_0 and point_1
+            double x_direction = (curr_pos - this->point_0).Dot(this->direction);
+            
+            // Decide the direction the model should move in
             if (this->goal_point == 1)
             {
-                if (curr_pos.X() <= this->point_1.X())
+                if (x_direction <= this->distance)
                 {
                     v = this->vel;
                 }
-                // Overshot point_1, go back
+                // Reached point_1, go back
                 else
                 {
                     v = -this->vel;
@@ -106,10 +87,10 @@ namespace gazebo
             }
             else
             {
-                if (curr_pos.X() >= this->point_0.X()) {
+                if (x_direction >= 0) {
                     v = -this->vel;
                 }
-                // Overshot point_0, go back
+                // Reached point_0, go back
                 else
                 {
                     v = this->vel;
@@ -117,25 +98,8 @@ namespace gazebo
                 }
             }
 
-
-            // // Calculate the error between actual and target velocity
-            // ignition::math::Vector3<double> curLinearVel = this->link->WorldLinearVel();
-            // ignition::math::Vector3<double> curAngularVel = this->link->WorldAngularVel();
-            // ignition::math::Vector3<double> linearError = curLinearVel - this->targetLinearVel;
-            // ignition::math::Vector3<double> angularError = curAngularVel - this->targetAngularVel;
-
-            // // Get forces to apply from controllers
-            // ignition::math::Vector3<double> worldForce;
-            // ignition::math::Vector3<double> worldTorque;
-            // worldForce.X() = this->controller_x.Update(linearError.X(), dt);
-            // worldTorque.Y() = this->controller_yy.Update(angularError.Y(), dt);
-
-            // // Add these forces to the body
-            // this->link->AddForce(worldForce);
-            // this->link->AddTorque(worldTorque);
-
-            // Apply a small linear velocity to the model.
-            this->model->SetLinearVel(ignition::math::Vector3d(v, 0, 0));
+            // Apply linear velocity to the model in the correct direction.
+            this->model->SetLinearVel(v*this->direction);
             this->model->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
         }
     };

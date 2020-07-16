@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6">
+    <world name="Dynamic Obstacles">
+        <!-- Light source and ground -->
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+        <include>
+            <uri>model://asphalt_plane</uri>
+        </include>
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <!-- 4 Dynamic Obstacles -->
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_0</name>
+            <pose>3 0.7 1 0 0 0</pose>
+            <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>3 5 0</point_0>
+                <point_1>3 -5 0</point_1>
+                <vel>2.0</vel>
+            </plugin>
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_1</name>
+            <pose>4 1 1 0 0 0</pose>
+            <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>4 -5 0</point_0>
+                <point_1>4 5 0</point_1>
+                <vel>2.0</vel>
+            </plugin>
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_2</name>
+            <pose>5 -2 1 0 0 0</pose>
+            <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>5 5 0</point_0>
+                <point_1>5 -5 0</point_1>
+                <vel>2.0</vel>
+            </plugin>
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_3</name>
+            <pose>6 -3 1 0 0 0</pose>
+            <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>6 -5 0</point_0>
+                <point_1>6 5 0</point_1>
+                <vel>2.0</vel>
+            </plugin>
+        </include>
+    </world>
+</sdf>

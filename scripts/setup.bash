@@ -14,6 +14,8 @@ else
     return 1
 fi
 
+pushd .
+
 # Build PX4 SITL
 cd ${FIRMWARE_DIR}
 DONT_RUN=1 make px4_sitl_default gazebo
@@ -30,3 +32,5 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${FIRMWARE_DIR}
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${FIRMWARE_DIR}/Tools/sitl_gazebo
 
 echo -e "ROS_PACKAGE_PATH $ROS_PACKAGE_PATH"
+
+popd

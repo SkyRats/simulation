@@ -110,9 +110,10 @@
     <!-- <allow_auto_disable>1</allow_auto_disable> -->
     
     <!-- Dynamic obstacle plugin -->
-    <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
-      <distance>5</distance>
+    <!-- <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+      <point_0>-1 -1 0</point_0>
+      <point_1>1 1 0</point_1>
       <vel>2.0</vel>
-    </plugin>
+    </plugin> -->
   </model>
 </sdf>
