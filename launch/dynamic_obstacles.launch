@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+        <arg name="vehicle" value="iris_rplidar" />
         <arg name="world" value="$(find simulation)/worlds/dynamic_obstacles.world" />
     </include>
 </launch>
