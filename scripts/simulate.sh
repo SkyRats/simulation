@@ -20,5 +20,5 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 
 # Mundo com H
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~/mavros_ws/src/simulation/models
-roslaunch simulation H_world.launch
-#roslaunch simulation indoor_imav2019.launch
+#roslaunch simulation H_world.launch
+roslaunch simulation dynamic_obstacles.launch
