@@ -4,7 +4,7 @@ ROS package for PX4-Gazebo-ROS Software-In-The-Loop simulations for the Skyrats 
 
 ## Contents
 
-- `launch`: launchfiles for starting gazebo worlds with ROS
+- `launch`: launchfiles for starting gazebo worlds/PX4 simulations with ROS
 - `models`: SDF and URDF models
 - `plugins`: Gazebo plugins
 - `scripts`: Setup scripts

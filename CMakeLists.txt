@@ -135,6 +135,10 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 add_library(dynamic_obstacle SHARED plugins/dynamic_obstacle.cpp)
 target_link_libraries(dynamic_obstacle ${GAZEBO_LIBRARIES})
 
+# Rope Plugin
+add_library(rope_plugin SHARED plugins/rope_plugin.cpp)
+target_link_libraries(rope_plugin ${GAZEBO_LIBRARIES})
+
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

@@ -3,6 +3,5 @@
     <include file="$(find px4)/launch/mavros_posix_sitl.launch">
         <arg name="vehicle" value="iris"/>
         <arg name="sdf" value="$(find simulation)/models/iris_rplidar_cam/model.sdf"/>
-        <arg name="world" value="$(find simulation)/worlds/dynamic_obstacles.world" />
     </include>
 </launch>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6">
+    <world name="rope_world">
+
+        <!-- Ground plane -->
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+        <include>
+            <uri>model://asphalt_plane</uri>
+        </include>
+
+        <!-- Sun -->
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <!-- Box 1 -->
+        <model name="box1">
+            <pose>-1 0 .5 0 0 0</pose>
+            <static>false</static>
+            <link name="link">
+                <inertial>
+                    <mass>1.0</mass>
+                    <inertia>
+                        <!-- inertias are tricky to compute -->
+                        <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
+                        <ixx>0.083</ixx> <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+                        <ixy>0.0</ixy> <!-- for a box: ixy = 0 -->
+                        <ixz>0.0</ixz> <!-- for a box: ixz = 0 -->
+                        <iyy>0.083</iyy> <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+                        <iyz>0.0</iyz> <!-- for a box: iyz = 0 -->
+                        <izz>0.083</izz> <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+                    </inertia>
+                </inertial>
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <!-- Box 2 -->
+        <model name="box2">
+            <pose>1 0 0.5 0 0 0</pose>
+            <static>false</static>
+            <link name="link">
+                <inertial>
+                    <mass>1.0</mass>
+                    <inertia>
+                        <!-- inertias are tricky to compute -->
+                        <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
+                        <ixx>0.083</ixx> <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
+                        <ixy>0.0</ixy> <!-- for a box: ixy = 0 -->
+                        <ixz>0.0</ixz> <!-- for a box: ixz = 0 -->
+                        <iyy>0.083</iyy> <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
+                        <iyz>0.0</iyz> <!-- for a box: iyz = 0 -->
+                        <izz>0.083</izz> <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+                    </inertia>
+                </inertial>
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+        <plugin name="rope_plugin" filename="librope_plugin.so">
+            <model1>box1</model1>
+            <model2>box2</model2>
+            <length>2</length>
+        </plugin>
+    </world>
+</sdf>
