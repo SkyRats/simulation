@@ -1,4 +1,4 @@
-# Scrips to setup the px4 Firmware for simulation and to initialize the simulation
+# Scripts to setup the px4 Firmware for simulation and to initialize the simulation
 For these scripts to work correctly they must have the following caracteristics:
 * The px4 Firmware must be installed in the following directory: 
         `~/src/Firmware`
