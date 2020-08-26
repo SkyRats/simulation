@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6">
+    <model name="iris_rplidar_cam">
+        <!-- Iris wind base model -->
+        <include>
+            <uri>model://iris</uri>
+            <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
+              <robotNamespace/>
+              <linkName>base_link</linkName>
+              <!-- Wind params -->
+              <xyzOffset>0 0 0</xyzOffset>
+              <windForceMean>4</windForceMean>
+              <windForceMax>50</windForceMax>
+              <windForceVariance>0</windForceVariance>
+              <windDirectionMean>1 0 0</windDirectionMean>
+              <windDirectionVariance>0</windDirectionVariance>
+            </plugin>
+        </include>
+
+        <!-- Camera -->
+        <include>
+            <uri>model://fpv_cam</uri>
+            <pose>0 0 0 0 1.57 0</pose>
+          </include>
+          <joint name="fpv_cam_joint" type="fixed">
+            <child>fpv_cam::link</child>
+            <parent>iris::base_link</parent>
+            <axis>
+              <xyz>0 0 1</xyz>
+              <limit>
+                <upper>0</upper>
+                <lower>0</lower>
+              </limit>
+            </axis>
+          </joint>
+    </model>
+</sdf>

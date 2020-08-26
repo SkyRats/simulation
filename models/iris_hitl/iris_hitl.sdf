@@ -1,5 +1,6 @@
+<?xml version='1.0'?>
 <sdf version='1.6'>
-    <model name='iris'>
+    <model name='iris_hitl'>
       <link name='base_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -556,6 +557,18 @@
         </control_channels>
       </plugin>
       <static>0</static>
+
+      <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
+      <robotNamespace/>
+      <linkName>base_link</linkName>
+      <xyzOffset>0 0 0</xyzOffset>
+      <windForceMean>5</windForceMean>
+      <windForceMax>50</windForceMax>
+      <windForceVariance>0</windForceVariance>
+      <windDirectionMean>1 0 0</windDirectionMean>
+      <windDirectionVariance>0</windDirectionVariance>
+      </plugin>
+
       <plugin name='rotors_gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
         <robotNamespace/>
         <linkName>/imu_link</linkName>

@@ -11,7 +11,7 @@
       <static>true</static>
       <uri>model://H</uri>
       <name>H</name>
-      <pose>2 0 2 1.57079 0 1.57079</pose>
+      <pose>0 0 0 0 0 0</pose>
     </include>
   </world>
 </sdf>
