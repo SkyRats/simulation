@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.6">
-    <model name="iris_rplidar_cam">
+    <model name="iris_fpv_cam">
         <!-- Iris wind base model -->
         <include>
             <uri>model://iris</uri>
