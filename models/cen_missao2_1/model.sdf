@@ -1,23 +1,37 @@
-<?xml version='1.0'?>
-<sdf version='1.6'>
-    <model name="cen1">
-        <link name="cen1_link">
-            <pose>0 0 0 0 0 0</pose>
-            <collision name="cen1_collision">
-                <geometry>
-                    <mesh>
-                        <uri>model://cen_missao2_1/meshes/cen_ind_missao2_1.dae</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="cen1_visual">
-                <cast_shadows>1</cast_shadows>
-                <geometry>
-                    <mesh>
-                        <uri>model://cen_missao2_1/meshes/cen_ind_missao2_1.dae</uri>
-                    </mesh>
-                </geometry>
-            </visual>
-        </link>
-    </model>
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_H">
+    <static>true</static>
+    <link name="H_link">
+      <visual name="visual_H">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cen_missao2_1/meshes/cen_ind_missao2_1.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+          <ambient>0.88 0.59 0.11 1</ambient>
+          <diffuse>0.99 0.66 0.12 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name="collision_H">
+        <geometry>
+          <mesh>
+            <uri>model://cen_missao2_1/meshes/cen_ind_missao2_1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
 </sdf>

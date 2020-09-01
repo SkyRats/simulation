@@ -9,20 +9,6 @@
         <unit meter="0.0254" name="inch" />
         <up_axis>Z_UP</up_axis>
     </asset>
-    <library_cameras>
-        <camera id="ID1" name="skp_camera_Last_Saved_SketchUp_View">
-            <optics>
-                <technique_common>
-                    <perspective>
-                        <yfov>35</yfov>
-                        <aspect_ratio>0</aspect_ratio>
-                        <znear>1</znear>
-                        <zfar>1000</zfar>
-                    </perspective>
-                </technique_common>
-            </optics>
-        </camera>
-    </library_cameras>
     <library_visual_scenes>
         <visual_scene id="ID2">
             <node name="SketchUp">
@@ -136,14 +122,6 @@
             </mesh>
         </geometry>
     </library_geometries>
-    <library_materials>
-        <material id="ID5" name="material">
-            <instance_effect url="#ID4" />
-        </material>
-        <material id="ID12" name="edge_color000255">
-            <instance_effect url="#ID13" />
-        </material>
-    </library_materials>
     <library_effects>
         <effect id="ID4">
             <profile_COMMON>

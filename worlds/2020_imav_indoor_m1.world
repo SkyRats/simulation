@@ -1,0 +1,75 @@
+<sdf version='1.6'>
+    <world name='mission1'>
+        <!-- Light and ground -->
+        <include>
+            <uri>model://sun</uri>
+        </include>
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+        <include>
+            <uri>model://asphalt_plane</uri>
+        </include>
+
+        <!-- Base -->
+        <include>
+            <uri>model://2020_base_m4</uri>
+            <pose>-1.24763 -5.54199 0 0 -0 0</pose>
+        </include>
+
+        <!-- Fan -->
+        <include>
+            <uri>model://2020_fanAndHeliport</uri>
+            <pose>6.94427 -9.39548 -0 0 -0 3.13599</pose>
+        </include>
+        
+        <!-- House -->
+        <include>
+            <uri>model://2020_house1_imav2020</uri>
+            <pose>1.02363 -5.7654 0 0 -0 0</pose>
+        </include>
+
+        <!-- 4 Dynamic Obstacles -->
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_0</name>
+            <pose>-8 -1.5 1.5 0 -0 0</pose>
+            <!-- <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>3 5 0</point_0>
+                <point_1>3 -5 0</point_1>
+                <vel>2.0</vel>
+            </plugin> -->
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_1</name>
+            <pose>-9.08047 -9.7811 1.5 0 -0 0</pose>
+            <!-- <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>4 -5 0</point_0>
+                <point_1>4 5 0</point_1>
+                <vel>2.0</vel>
+            </plugin> -->
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_2</name>
+            <pose>-8.98812 -4.11179 1.5 0 -0 0</pose>
+            <!-- <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>5 5 0</point_0>
+                <point_1>5 -5 0</point_1>
+                <vel>2.0</vel>
+            </plugin> -->
+        </include>
+        <include>
+            <uri>model://orange_pole</uri>
+            <name>obstacle_3</name>
+            <pose>-8.94862 -7.27055 1.5 0 -0 0</pose>
+            <!-- <plugin name="dynamic_obstacle" filename="libdynamic_obstacle.so">
+                <point_0>6 -5 0</point_0>
+                <point_1>6 5 0</point_1>
+                <vel>2.0</vel>
+            </plugin> -->
+        </include>
+
+    </world>
+</sdf>
