@@ -5,9 +5,7 @@
 
     <pose>0 0 1.5 0 0 0</pose>
     <link name='pole'>
-      <!-- <pose frame=''>0 -0 0 0 -0 0</pose> -->
       <inertial>
-        <!-- <pose frame=''>0 0 0 0 -0 0</pose> -->
         <mass>1</mass>
         <inertia>
           <ixx>0.145833</ixx>
@@ -22,7 +20,7 @@
       <gravity>0</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
-      <enable_wind>0</enable_wind>
+      <enable_wind>true</enable_wind>
 
       <visual name='pole_visual'>
         <geometry>
@@ -44,6 +42,9 @@
           <diffuse>0.99 0.66 0.12 1</diffuse>
           <specular>0.01 0.01 0.01 1</specular>
           <emissive>0 0 0 1</emissive>
+          
+          <!-- <ambient>1 0 0 1</ambient> -->
+          <!-- <emissive>1 0 0 1</emissive> -->
         </material>
         <transparency>0</transparency>
         <cast_shadows>1</cast_shadows>

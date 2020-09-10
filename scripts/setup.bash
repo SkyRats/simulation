@@ -18,7 +18,7 @@ pushd .
 
 # Build PX4 SITL
 cd ${FIRMWARE_DIR}
-DONT_RUN=1 make px4_sitl_default gazebo
+#DONT_RUN=1 make px4_sitl_default gazebo
 
 # Setup Gazebo to find this package's models and plugins
 export GAZEBO_MODEL_PATH=${SIMULATION_DIR}/models:${GAZEBO_MODEL_PATH}

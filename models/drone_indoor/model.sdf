@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version='1.6'>
+    <model name="drone_indoor">
+        <!-- Base model -->
+        <!-- ATUALMENTE USANDO O IRIS ATE CORRIGIR O MESH DO DRONE -->
+        <include>
+            <uri>model://iris</uri>
+        </include>
+
+        <!-- Camera -->
+
+        <!-- Optical Flow -->
+
+        <!-- Thermal camera -->
+        <include>
+            <uri>model://thermal_camera</uri>
+            <pose>0 0 0 0 1.57 0</pose>
+        </include>
+        <joint name="thermal_camera_joint" type="fixed">
+            <child>thermal_camera::link</child>
+            <parent>iris::base_link</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <upper>0</upper>
+                    <lower>0</lower>
+                </limit>
+            </axis>
+        </joint>
+
+        <!-- LiDAR 360 -->
+
+        <!-- LiDAR (Altitude) -->
+
+    </model>
+</sdf>

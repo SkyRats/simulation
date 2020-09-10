@@ -9,11 +9,21 @@ project(simulation)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
+  gazebo_plugins
   roscpp
   rospy
 )
-# Depend on system install of Gazebo
+
+# Find gazebo
+if(POLICY CMP0054)
+  cmake_policy(SET CMP0054 NEW)
+endif()
 find_package(gazebo REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
+
+
+# Find Boost
+find_package(Boost REQUIRED COMPONENTS thread)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -105,12 +115,13 @@ find_package(gazebo REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+ INCLUDE_DIRS include
 #  LIBRARIES simulation
 #  CATKIN_DEPENDS gazebo_ros roscpp rospy
   DEPENDS
     roscpp
     gazebo_ros
+    gazebo_plugins
 )
 
 ###########
@@ -120,9 +131,10 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
   ${GAZEBO_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
 )
 link_directories(${GAZEBO_LIBRARY_DIRS})
 
@@ -138,6 +150,15 @@ target_link_libraries(dynamic_obstacle ${GAZEBO_LIBRARIES})
 # Rope Plugin
 add_library(rope_plugin SHARED plugins/rope_plugin.cpp)
 target_link_libraries(rope_plugin ${GAZEBO_LIBRARIES})
+
+# Hector Thermal Camera
+add_library(gazebo_ros_thermal_camera plugins/gazebo_ros_thermal_camera_plugin.cpp)
+target_link_libraries(gazebo_ros_thermal_camera ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${Boost_LIBRARIES} CameraPlugin)
+
+# Hector Thermal Depth Camera
+add_library(gazebo_ros_thermal_depth_camera plugins/gazebo_ros_thermal_depth_camera_plugin.cpp)
+target_link_libraries(gazebo_ros_thermal_depth_camera ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${Boost_LIBRARIES} DepthCameraPlugin)
+
 
 
 ## Add cmake target dependencies of the library
