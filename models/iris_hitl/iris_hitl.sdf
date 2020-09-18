@@ -52,6 +52,8 @@
         <gravity>1</gravity>
         <velocity_decay/>
       </link>
+
+
       <link name='/imu_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -85,6 +87,11 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
+
+
+
+
+
       <link name='rotor_0'>
         <pose frame=''>0.13 -0.22 0.023 0 -0 0</pose>
         <inertial>
@@ -116,6 +123,7 @@
             </friction>
           </surface>
         </collision>
+
         <visual name='rotor_0_visual'>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
@@ -131,9 +139,12 @@
             </script>
           </material>
         </visual>
+
         <gravity>1</gravity>
         <velocity_decay/>
+
       </link>
+
       <joint name='rotor_0_joint' type='revolute'>
         <child>rotor_0</child>
         <parent>base_link</parent>
@@ -150,6 +161,12 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
+
+
+
+
+
+
       <link name='rotor_1'>
         <pose frame=''>-0.13 0.2 0.023 0 -0 0</pose>
         <inertial>
@@ -199,6 +216,7 @@
         <gravity>1</gravity>
         <velocity_decay/>
       </link>
+
       <joint name='rotor_1_joint' type='revolute'>
         <child>rotor_1</child>
         <parent>base_link</parent>
@@ -215,6 +233,10 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
+
+
+
+
       <link name='rotor_2'>
         <pose frame=''>0.13 0.22 0.023 0 -0 0</pose>
         <inertial>
@@ -261,9 +283,14 @@
             </script>
           </material>
         </visual>
+
+
+
         <gravity>1</gravity>
         <velocity_decay/>
       </link>
+
+
       <joint name='rotor_2_joint' type='revolute'>
         <child>rotor_2</child>
         <parent>base_link</parent>
@@ -280,6 +307,10 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
+
+
+
+
       <link name='rotor_3'>
         <pose frame=''>-0.13 -0.2 0.023 0 -0 0</pose>
         <inertial>
@@ -329,6 +360,9 @@
         <gravity>1</gravity>
         <velocity_decay/>
       </link>
+
+
+
       <joint name='rotor_3_joint' type='revolute'>
         <child>rotor_3</child>
         <parent>base_link</parent>
@@ -345,6 +379,12 @@
           <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
       </joint>
+
+
+
+
+
+
       <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
         <robotNamespace/>
         <linkName>base_link</linkName>
@@ -367,6 +407,8 @@
         <motorSpeedPubTopic>/motor_speed/0</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
+
+
       <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
         <robotNamespace/>
         <jointName>rotor_1_joint</jointName>
@@ -418,10 +460,14 @@
         <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
       </plugin>
+
+
       <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
         <robotNamespace/>
         <gpsNoise>1</gpsNoise>
       </plugin>
+
+
       <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
         <robotNamespace/>
         <pubRate>100</pubRate>
@@ -430,11 +476,76 @@
         <biasCorrelationTime>600</biasCorrelationTime>
         <magTopic>/mag</magTopic>
       </plugin>
+
+
       <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
         <robotNamespace/>
         <pubRate>50</pubRate>
         <baroTopic>/baro</baroTopic>
       </plugin>
+
+      
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
       <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
         <robotNamespace/>
         <imuSubTopic>/imu</imuSubTopic>

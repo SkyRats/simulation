@@ -411,6 +411,62 @@
             <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
         </plugin>
         <!--  ############################################################################### -->
+
+        <!--  ############################################################################### -->
+        <!--  GPS MODEL -->
+        <model name='gps0'>
+            <!-- #LINK# -->
+            <link name='link'>
+              <pose frame=''>0 0 0 0 -0 0</pose>
+              <inertial>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <mass>0.01</mass>
+                <inertia>
+                  <ixx>2.1733e-06</ixx>
+                  <ixy>0</ixy>
+                  <ixz>0</ixz>
+                  <iyy>2.1733e-06</iyy>
+                  <iyz>0</iyz>
+                  <izz>1.8e-07</izz>
+                </inertia>
+              </inertial>
+              <visual name='visual'>
+                <geometry>
+                  <cylinder>
+                    <radius>0.01</radius>
+                    <length>0.002</length>
+                  </cylinder>
+                </geometry>
+                <material>
+                  <script>
+                    <name>Gazebo/Black</name>
+                    <uri>__default__</uri>
+                  </script>
+                </material>
+              </visual>
+              <sensor name='gps' type='gps'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
+                  <robotNamespace/>
+                  <gpsNoise>1</gpsNoise>
+                  <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
+                  <gpsZRandomWalk>4.0</gpsZRandomWalk>
+                  <gpsXYNoiseDensity>0.0002</gpsXYNoiseDensity>
+                  <gpsZNoiseDensity>0.0004</gpsZNoiseDensity>
+                  <gpsVXYNoiseDensity>0.2</gpsVXYNoiseDensity>
+                  <gpsVZNoiseDensity>0.4</gpsVZNoiseDensity>
+                </plugin>
+              </sensor>
+            </link>
+          </model>
+
+          <!-- #JOINT# -->
+          <joint name='gps0_joint' type='fixed'>
+            <parent>base_link</parent>
+            <child>gps0::link</child>
+          </joint>
+
+        <!--  ############################################################################### -->
         
         <!--  ############################################################################### -->
         <!--  GAZEBO MOTOR MODEL -->
@@ -659,11 +715,21 @@
             <windDirectionVariance>0</windDirectionVariance>
         </plugin>
 
-        <!--  PLUGIN NAME -->
+        <!--  GroundTruth -->
+        <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
+            <robotNamespace/>
+        </plugin>
 
-        <!--  PLUGIN NAME -->
+        <!-- Cam -->
 
-        <!--  PLUGIN NAME -->
+        <!--  Thermal Cam -->
+
+        <!--  Lidar 360 -->
+
+        <!--  Lidar Altitude -->
+
+        <!--  Intel RealSense -->
+
         <!--  ############################################################################### -->
 
     </model>
