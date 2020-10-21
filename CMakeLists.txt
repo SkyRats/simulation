@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_plugins
   roscpp
   rospy
+  geometry_msgs
+  nav_msgs
 )
 
 # Find gazebo
@@ -169,7 +171,8 @@ target_link_libraries(gazebo_ros_thermal_depth_camera ${GAZEBO_LIBRARIES} ${catk
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/simulation_node.cpp)
+add_executable(odom_to_pose_node src/odom_to_pose.cpp)
+target_link_libraries(odom_to_pose_node ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

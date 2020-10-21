@@ -4,4 +4,7 @@
         <arg name="vehicle" value="iris"/>
         <arg name="sdf" value="$(find simulation)/models/iris_rs_odometry/iris_rs_odometry.sdf"/>
     </include>
+    
+    <node pkg="simulation" name="odom_to_pose" type="odom_to_pose_node" output="screen"/>
+    
 </launch>
