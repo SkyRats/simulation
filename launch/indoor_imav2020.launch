@@ -4,5 +4,7 @@
         <arg name="vehicle" value="iris"/>
         <arg name="sdf" value="$(find simulation)/models/drone_indoor/model.sdf"/>
         <arg name="world" value="$(find simulation)/worlds/2020_imav_indoor_m1.world" />
+        <arg name="x" value="-14.046228"/>
+        <arg name="y" value="-5.846059"/>
     </include>
 </launch>
