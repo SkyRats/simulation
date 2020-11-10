@@ -17,12 +17,24 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 # Find gazebo
+if(POLICY CMP0100)
+  cmake_policy(SET CMP0100 NEW)
+endif()# mudei aqui e vou tentar compilar
+
 if(POLICY CMP0054)
   cmake_policy(SET CMP0054 NEW)
 endif()
+
+set (CMAKE_AUTOMOC ON)
+
 find_package(gazebo REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
+# GUI dependencies
+find_package (Qt5Widgets REQUIRED)
+find_package (Qt5Core REQUIRED)
+find_package (Protobuf REQUIRED)
+find_package (ignition-transport4 REQUIRED)
 
 # Find Boost
 find_package(Boost REQUIRED COMPONENTS thread)
@@ -137,6 +149,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${GAZEBO_INCLUDE_DIRS}
   ${Boost_INCLUDE_DIRS}
+  ${Qt5Core_INCLUDE_DIRS}
 )
 link_directories(${GAZEBO_LIBRARY_DIRS})
 
@@ -161,6 +174,22 @@ target_link_libraries(gazebo_ros_thermal_camera ${GAZEBO_LIBRARIES} ${catkin_LIB
 add_library(gazebo_ros_thermal_depth_camera plugins/gazebo_ros_thermal_depth_camera_plugin.cpp)
 target_link_libraries(gazebo_ros_thermal_depth_camera ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES} ${Boost_LIBRARIES} DepthCameraPlugin)
 
+# Wind plugin
+add_library(gazebo_wind_plugin SHARED plugins/gazebo_wind_plugin.cpp)
+target_link_libraries(gazebo_wind_plugin ${GAZEBO_LIBRARIES})
+
+# Interface plugin
+qt5_wrap_cpp(QT_MOC include/simulation/skyrats_interface.hh)
+
+add_library(skyrats_interface SHARED ${headers_MOC}
+  plugins/skyrats_interface.cc
+  ${QT_MOC})
+target_link_libraries(skyrats_interface ${GAZEBO_LIBRARIES}
+    ${Qt5Core_LIBRARIES}
+    ${Qt5Widgets_LIBRARIES}
+    ${PROTOBUF_LIBRARIES}
+    ignition-transport4::ignition-transport4
+    )
 
 
 ## Add cmake target dependencies of the library
@@ -243,3 +272,4 @@ target_link_libraries(odom_to_pose_node ${catkin_LIBRARIES})
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+

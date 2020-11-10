@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <gui>
+      <plugin name="skyrats_interface" filename="libskyrats_interface.so"/>
+    </gui>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="hot_box">
+      <link name="link">
+          <pose>0 0 0.5 0 0 0</pose>
+          <inertial>
+              <mass>1</mass>
+              <inertia>
+                  <ixx>0.166666</ixx>
+                  <iyy>0.166666</iyy>
+                  <izz>0.166666</izz>
+                  <ixy>0</ixy>
+                  <ixz>0</ixz>
+                  <iyz>0</iyz>
+              </inertia>
+          </inertial>
+
+          <visual name="visual">
+              <geometry>
+                  <box>
+                      <size>1 1 1</size>
+                  </box>
+              </geometry>
+              <material>
+                  <lighting>1</lighting>
+                  <script>
+                      <uri>file://media/materials/scripts/gazebo.material</uri>
+                      <name>Gazebo/Grey</name>
+                  </script>
+                  <shader type='vertex'>
+                      <normal_map>__default__</normal_map>
+                  </shader>
+                  <ambient>1 0 0 1</ambient>
+                  <diffuse>0.99 0.66 0.12 1</diffuse>
+                  <specular>0.01 0.01 0.01 1</specular>
+                  <emissive>1 0 0 1</emissive>
+              </material>
+              <transparency>0</transparency>
+              <cast_shadows>1</cast_shadows>
+          </visual>
+          <collision name="collision">
+              <geometry>
+                  <box>
+                      <size>1 1 1</size>
+                  </box>
+              </geometry>
+          </collision>
+      </link>
+      <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
+        <robotNamespace/>
+        <linkName>link</linkName>
+        <!-- Wind params -->
+        <xyzOffset>0 0 0</xyzOffset>
+        <windForceMean>4</windForceMean>
+        <windForceMax>50</windForceMax>
+        <windForceVariance>0</windForceVariance>
+        <windDirectionMean>1 0 0</windDirectionMean>
+        <windDirectionVariance>0</windDirectionVariance>
+      </plugin>
+  </model>
+  </world>
+</sdf>

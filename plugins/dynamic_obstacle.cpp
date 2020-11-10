@@ -39,6 +39,15 @@ namespace gazebo
         // Translation velocity
         private: double vel;
 
+        // Transport node
+        private: transport::NodePtr node;
+
+        // Toggle subscriber
+        private: transport::SubscriberPtr toggle_sub;
+
+        // Toggle status
+        private: bool toggle_status;
+
         // Called on model creation
         public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
         {
@@ -61,11 +70,24 @@ namespace gazebo
             // Listen to the update event.
             // This event is broadcast every simulation iteration.
             this->updateConnection = event::Events::ConnectWorldUpdateBegin(std::bind(&DynamicObstacle::OnUpdate, this));
+
+            // Toggle subscriber
+            this->node = transport::NodePtr(new transport::Node());
+            this->node->Init();
+            this->toggle_sub = node->Subscribe("~/obstacle_toggle", &DynamicObstacle::ToggleCallback, this);
+            this->toggle_status = true;
         }
 
          // Called by the world update start event
         public: void OnUpdate()
         {
+            if (!this->toggle_status)
+            {
+                this->model->SetLinearVel(ignition::math::Vector3d(0, 0, 0));
+                this->model->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+                return;
+            }
+
             double v;
             ignition::math::Vector3<double> curr_pos = this->link->WorldCoGPose().Pos();
             // Coordinate of the model in the direction between point_0 and point_1
@@ -101,6 +123,12 @@ namespace gazebo
             // Apply linear velocity to the model in the correct direction.
             this->model->SetLinearVel(v*this->direction);
             this->model->SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+        }
+
+        public: void ToggleCallback(ConstIntPtr &msg)
+        {
+            gzmsg << "\tObstacle Toggled " << this->toggle_status << std::endl;
+            this->toggle_status = !this->toggle_status;
         }
     };
 

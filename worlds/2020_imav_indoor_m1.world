@@ -1,5 +1,44 @@
 <sdf version='1.6'>
     <world name='mission1'>
+
+        <!-- <physics name="default_physics" default="true" type="ode">
+            <max_step_size>0.002</max_step_size>
+            <real_time_factor>1</real_time_factor>
+            <real_time_update_rate>500</real_time_update_rate>
+            <ode>
+              <solver>
+                <type>quick</type>
+                <iters>50</iters>
+                <sor>0.5</sor>
+              </solver>
+            </ode>
+        </physics> -->
+
+        <gui>
+            <plugin name="sample" filename="libgui_example_spawn_widget.so"/>
+        </gui>
+
+
+          <scene>
+            <ambient>0.01 0.01 0.01 1.0</ambient>
+            <sky>
+              <clouds>
+                <speed>12</speed>
+              </clouds>
+            </sky>
+            <shadows>1</shadows>
+            <fog>
+              <color>0.8 0.8 0.8 1.0</color>
+              <type>linear</type>
+              <density>0</density>
+              <start>10000.0</start>
+              <end>30000.0</end>
+            </fog>
+          </scene>
+    
+       
+        
+
         <!-- Light and ground -->
         <include>
             <uri>model://sun</uri>
