@@ -46,11 +46,6 @@
         <include>
             <uri>model://ground_plane</uri>
         </include>
-        <include>
-            <uri>model://asphalt_plane</uri>
-            <scale>10 10 1</scale>
-            <pose>0 0 -0.02 0 -0 0</pose>
-        </include>
 
         <!-- Base -->
         <include>
@@ -111,5 +106,11 @@
                 <vel>2.0</vel>
             </plugin>
         </include>
+
+        <include>
+            <uri>model://2020_imav_indoor_finished</uri>
+            <pose>-1.24763 -5.54199 -0.3 0 -0 0</pose>
+        </include>
+
     </world>
 </sdf>
