@@ -7,11 +7,11 @@
         </include>
         <!-- LiDAR -->
         <include>
-            <uri>model://lidar</uri>
+            <uri>model://lidardownward</uri>
             <pose>0 0 0 0 0 0</pose>
         </include>
         <joint name="lidar_joint" type="revolute">
-            <child>lidar::link</child>
+            <child>lidardownward::link</child>
             <parent>iris::base_link</parent>
             <axis>
                 <xyz>0 0 1</xyz>
