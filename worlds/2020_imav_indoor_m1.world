@@ -95,7 +95,15 @@
           <uri>model://gym_fence</uri>
           <pose>4 -10.6 0 0 0 1.5707963268</pose>
         </include>
-      
+        
+        <!-- The H -->
+        <include>
+          <name>H</name>
+          <uri>model://droneponto</uri>
+          <pose>6.938190 -9.295987 0 0 0 0</pose>
+          <scale>2 2 2</scale>
+        </include>
+
         <!-- 4 Dynamic Obstacles -->
         <include>
             <uri>model://orange_pole</uri>
