@@ -20,7 +20,6 @@
 
 
           <scene>
-            <ambient>0.01 0.01 0.01 1.0</ambient>
             <sky>
               <clouds>
                 <speed>12</speed>
@@ -65,6 +64,38 @@
             <pose>1.02363 -5.7654 0 0 -0 0</pose>
         </include>
 
+        <!-- Gym fence -->
+        <include>
+          <uri>model://gym_fence</uri>
+          <name>fence_1</name>
+          <pose>7.8 -5.6 0 0 -0 0</pose>
+        </include>
+        <include>
+          <name>fence_2</name>
+          <uri>model://gym_fence</uri>
+          <pose>-11 -5.6 0 0 -0 0</pose>
+        </include>
+        <include>
+          <name>fence_3</name>
+          <uri>model://gym_fence</uri>
+          <pose>-6 -0.6 0 0 0 1.5707963268</pose>
+        </include>
+        <include>
+          <name>fence_4</name>
+          <uri>model://gym_fence</uri>
+          <pose>4 -0.6 0 0 0 1.5707963268</pose>
+        </include>
+        <include>
+          <name>fence_5</name>
+          <uri>model://gym_fence</uri>
+          <pose>-6 -10.6 0 0 0 1.5707963268</pose>
+        </include>
+        <include>
+          <name>fence_6</name>
+          <uri>model://gym_fence</uri>
+          <pose>4 -10.6 0 0 0 1.5707963268</pose>
+        </include>
+      
         <!-- 4 Dynamic Obstacles -->
         <include>
             <uri>model://orange_pole</uri>

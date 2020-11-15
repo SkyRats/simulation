@@ -15,9 +15,33 @@
       <uri>model://ground_plane</uri>
     </include>
 
+
+    <population name="can_population1">
+      <model name="can1">
+        <include>
+          <static>true</static>
+          <uri>model://meshes/gym_fence.dae</uri>
+        </include>
+      </model>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>2 2 0.01</size>
+      </box>
+      <model_count>10</model_count>
+      <distribution>
+        <type>linear-x</type>
+      </distribution>
+    </population>
+
+
+
+
+
+
+
     <model name="hot_box">
       <link name="link">
-          <pose>0 0 0.5 0 0 0</pose>
+          <pose>5 0 0.5 0 0 0</pose>
           <inertial>
               <mass>1</mass>
               <inertia>
