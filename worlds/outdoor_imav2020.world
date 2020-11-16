@@ -13,6 +13,54 @@
       </attenuation>
       <direction>-0.5 0.1 -0.9</direction>
     </light>
+
+
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <shadows>1</shadows>
+    </scene>
+
+
+    <!-- DROP ZONES -->
+    <population name="drop_zone_clean">
+      <model name="drop_zone_clean">
+        <include>
+          <static>true</static>
+          <uri>model://dropzone_clean</uri>
+        </include>
+      </model>
+      <pose>0 0 11 0 0 0</pose>
+      <box>
+        <size>120 120 0.01</size>
+      </box>
+      <model_count>1</model_count>
+      <distribution>
+        <type>random</type>
+      </distribution>
+    </population>
+
+    <population name="drop_zones_obstructeds">
+      <model name="dropzone_obstructed">
+        <include>
+          <static>true</static>
+          <uri>model://dropzone_obstructed</uri>
+        </include>
+      </model>
+      <pose>0 0 11 0 0 0</pose>
+      <box>
+        <size>120 120 0.01</size>
+      </box>
+      <model_count>2</model_count>
+      <distribution>
+        <type>random</type>
+      </distribution>
+    </population>
+
+
     <include>
       <uri>model://outdoor_puebla</uri>
     </include>

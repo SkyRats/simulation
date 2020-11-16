@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_H">
+    <static>true</static>
+    <link name="dropzone">
+      <visual name="dropzone">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://dropzone_obstructed/meshes/dropzone.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+          </script>
+          <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+          </shader>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.99 0.66 0.12 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>1 0 0 1</emissive>
+      </material>
+      </visual>
+      <collision name="collision_dropzone_obstructed">
+        <geometry>
+          <mesh>
+            <uri>model://dropzone_obstructed/meshes/dropzone_obstructed.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    
+    <link name="obstruction">
+      <visual name="obstruction">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://dropzone_obstructed/meshes/obstruction.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+          </script>
+          <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+          </shader>
+      </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
