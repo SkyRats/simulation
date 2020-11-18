@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <include file="$(find px4)/launch/mavros_posix_sitl.launch">
-        <arg name="vehicle" value="iris"/>
+        <arg name="vehicle" value="iris_fpv_cam"/>
         <arg name="sdf" value="$(find simulation)/models/iris_wind_cam/iris_wind_cam.sdf"/>
         <arg name="world" value="$(find simulation)/worlds/H.world" />
-        <arg name="z" value="0.2"/>
-
+        <arg name="z" value="0.5"/>
     </include>
 </launch>
