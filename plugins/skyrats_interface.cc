@@ -54,6 +54,16 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   // Create the layout that sits inside the frame
   QVBoxLayout *frameLayout = new QVBoxLayout();
 
+  //ABAS
+  QTabWidget *abas;
+  QWidget *nes;
+  QWidget *aba_inicial;
+  QWidget *aba_indoor;
+  QWidget *aba_outdoor;
+
+  abas = new QTabWidget(nes);
+  abas->setObjectName(QStringLiteral("abas"));
+  abas->setGeometry(QRect(0, 0, 721, 581));
   //CREATE BUTTONS
   QPushButton *WindButton = new QPushButton(tr("ON/OFF WIND"));
   connect(WindButton, SIGNAL(clicked()), this, SLOT(WindButton()));
@@ -78,6 +88,7 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
 
   //ADD WIDGETS TO INTERFACE
   frameLayout->addWidget(Skyrats_txt);
+
   frameLayout->addWidget(Skyrats_img);
 
   frameLayout->addWidget(WindButton);
@@ -85,6 +96,9 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   frameLayout->addWidget(SmokeButton);
 
   frameLayout->addWidget(ObstacleButton);
+
+  QLabel *indoor_txt = new QLabel(("Indoor Simulation"));
+  frameLayout->addWidget(indoor_txt);
 
   // Add frameLayout to the frame
   mainFrame->setLayout(frameLayout);
@@ -100,7 +114,7 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
 
   // Position and resize this widget
   this->move(10, 10);
-  this->resize(160, 190);
+  this->resize(160, 210);
 
   // Create a node for transportation
   this->node = transport::NodePtr(new transport::Node());

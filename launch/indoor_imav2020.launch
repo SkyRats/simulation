@@ -2,7 +2,10 @@
 <launch>
     <include file="$(find px4)/launch/mavros_posix_sitl.launch">
         <arg name="vehicle" value="iris"/>
-        <arg name="sdf" value="$(find simulation)/models/iris_rplidar/model.sdf"/>
+        <arg name="sdf" value="$(find simulation)/models/drone_indoor/model.sdf"/>
         <arg name="world" value="$(find simulation)/worlds/2020_imav_indoor_m1.world" />
+        <arg name="x" value="-9.416228"/>
+        <arg name="y" value="-5.846059"/>
+        <arg name="z" value="0.5"/>
     </include>
 </launch>

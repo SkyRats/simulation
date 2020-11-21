@@ -11,7 +11,7 @@
             
         <!-- Iris wind base model -->
         <include>
-	    <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
+	          <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
               <robotNamespace/>
               <linkName>base_link</linkName>
               <!-- Wind params -->
