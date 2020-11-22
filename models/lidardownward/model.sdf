@@ -43,8 +43,8 @@
           </range>
           <noise>
             <type>gaussian</type>
-            <mean>0.0</mean>
-            <stddev>0.02</stddev>
+            <mean>2</mean>
+            <stddev>2</stddev>
           </noise>
         </ray>
         <plugin name="laser" filename="libRayPlugin.so" />

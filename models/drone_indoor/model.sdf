@@ -19,7 +19,7 @@
 
         <!-- RPLiDAR -->
         <include>
-            <uri>model://rplidar</uri>
+            <uri>model://noise_rplidar</uri>
             <pose>0 0 0.1 0 0 0</pose>
         </include>
         <joint name="rplidar_joint" type="revolute">

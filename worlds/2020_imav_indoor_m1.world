@@ -55,6 +55,25 @@
             <pose>-1.24763 -5.54199 0 0 -0 0</pose>
         </include>
 
+        <!-- DUMMIES -->
+         <include>
+          <name>1</name>
+          <uri>model://2020_bonequinho_50kg</uri>
+          <pose>-3.622880 -5.944703 -7.642968 1.589498 0 0</pose>
+        </include>
+
+       <include>
+          <name>2</name>
+          <uri>model://2020_bonequinho_50kg</uri>
+          <pose>1.824439 -2.948833 -7.474866 1.556342 0 0</pose>
+        </include>
+
+        <include>
+          <name>3</name>
+          <uri>model://2020_bonequinho_50kg</uri>
+          <pose>-1.707760 -3.192324 -7.692424 1.549182 0 0</pose>
+        </include>
+
         <!-- Fan -->
         <include>
             <uri>model://2020_fanAndHeliport</uri>

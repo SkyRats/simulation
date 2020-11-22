@@ -3,7 +3,7 @@
   <model name='bonequinho_50kg'>
     <link name='link_0'>
       <inertial>
-        <mass>0</mass>
+        <mass>50</mass>
         <inertia>
           <ixx>0</ixx>
           <ixy>0</ixy>
