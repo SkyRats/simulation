@@ -60,6 +60,7 @@
       </distribution>
     </population>
 
+<<<<<<< HEAD
     <!-- Ballon -->
     <model name="ballon">
       <pose>0 -50 100 0 0 0</pose>
@@ -72,6 +73,8 @@
         </visual>
       </link>
     </model>    
+=======
+>>>>>>> 82820e172bd75681b25128c8909edbb8d2a42c04
 
     <include>
       <uri>model://outdoor_puebla</uri>

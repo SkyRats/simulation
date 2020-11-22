@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="ballon">
+    <static>true</static>
+    <link name="ballon_link">
+      <visual name="ballon_visual">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://ballon/meshes/balao.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://ballon/materials/scripts</uri>
+            <uri>file://ballon/materials/textures</uri>
+            <name>ballon</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_ballon">
+        <geometry>
+          <mesh>
+            <uri>model://ballon/meshes/balao.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
