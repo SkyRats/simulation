@@ -1,0 +1,3194 @@
+<?xml version="1.0"?><sdf version="1.5">
+ <model name="Corda">
+  <self_collide>true</self_collide>
+   <link name="link_1">
+    <pose>0 0 0.0</pose>
+    <collision name="1">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="1">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <link name="link_2">
+    <pose>0 0 0.01</pose>
+    <collision name="2">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="2">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 1" type="ball">
+    <parent>link_2</parent>
+    <child>link_1</child>
+    <pose>0 0 0.01</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_3">
+    <pose>0 0 0.02</pose>
+    <collision name="3">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="3">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 2" type="ball">
+    <parent>link_3</parent>
+    <child>link_2</child>
+    <pose>0 0 0.02</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_4">
+    <pose>0 0 0.03</pose>
+    <collision name="4">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="4">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 3" type="ball">
+    <parent>link_4</parent>
+    <child>link_3</child>
+    <pose>0 0 0.03</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_5">
+    <pose>0 0 0.04</pose>
+    <collision name="5">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="5">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 4" type="ball">
+    <parent>link_5</parent>
+    <child>link_4</child>
+    <pose>0 0 0.04</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_6">
+    <pose>0 0 0.05</pose>
+    <collision name="6">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="6">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 5" type="ball">
+    <parent>link_6</parent>
+    <child>link_5</child>
+    <pose>0 0 0.05</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_7">
+    <pose>0 0 0.06</pose>
+    <collision name="7">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="7">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 6" type="ball">
+    <parent>link_7</parent>
+    <child>link_6</child>
+    <pose>0 0 0.06</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_8">
+    <pose>0 0 0.07</pose>
+    <collision name="8">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="8">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 7" type="ball">
+    <parent>link_8</parent>
+    <child>link_7</child>
+    <pose>0 0 0.07</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_9">
+    <pose>0 0 0.08</pose>
+    <collision name="9">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="9">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 8" type="ball">
+    <parent>link_9</parent>
+    <child>link_8</child>
+    <pose>0 0 0.08</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_10">
+    <pose>0 0 0.09</pose>
+    <collision name="10">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="10">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 9" type="ball">
+    <parent>link_10</parent>
+    <child>link_9</child>
+    <pose>0 0 0.09</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_11">
+    <pose>0 0 0.1</pose>
+    <collision name="11">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="11">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 10" type="ball">
+    <parent>link_11</parent>
+    <child>link_10</child>
+    <pose>0 0 0.1</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_12">
+    <pose>0 0 0.11</pose>
+    <collision name="12">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="12">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 11" type="ball">
+    <parent>link_12</parent>
+    <child>link_11</child>
+    <pose>0 0 0.11</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_13">
+    <pose>0 0 0.12</pose>
+    <collision name="13">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="13">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 12" type="ball">
+    <parent>link_13</parent>
+    <child>link_12</child>
+    <pose>0 0 0.12</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_14">
+    <pose>0 0 0.13</pose>
+    <collision name="14">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="14">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 13" type="ball">
+    <parent>link_14</parent>
+    <child>link_13</child>
+    <pose>0 0 0.13</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_15">
+    <pose>0 0 0.14</pose>
+    <collision name="15">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="15">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 14" type="ball">
+    <parent>link_15</parent>
+    <child>link_14</child>
+    <pose>0 0 0.14</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_16">
+    <pose>0 0 0.15</pose>
+    <collision name="16">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="16">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 15" type="ball">
+    <parent>link_16</parent>
+    <child>link_15</child>
+    <pose>0 0 0.15</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_17">
+    <pose>0 0 0.16</pose>
+    <collision name="17">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="17">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 16" type="ball">
+    <parent>link_17</parent>
+    <child>link_16</child>
+    <pose>0 0 0.16</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_18">
+    <pose>0 0 0.17</pose>
+    <collision name="18">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="18">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 17" type="ball">
+    <parent>link_18</parent>
+    <child>link_17</child>
+    <pose>0 0 0.17</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_19">
+    <pose>0 0 0.18</pose>
+    <collision name="19">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="19">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 18" type="ball">
+    <parent>link_19</parent>
+    <child>link_18</child>
+    <pose>0 0 0.18</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_20">
+    <pose>0 0 0.19</pose>
+    <collision name="20">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="20">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 19" type="ball">
+    <parent>link_20</parent>
+    <child>link_19</child>
+    <pose>0 0 0.19</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_21">
+    <pose>0 0 0.2</pose>
+    <collision name="21">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="21">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 20" type="ball">
+    <parent>link_21</parent>
+    <child>link_20</child>
+    <pose>0 0 0.2</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_22">
+    <pose>0 0 0.21</pose>
+    <collision name="22">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="22">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 21" type="ball">
+    <parent>link_22</parent>
+    <child>link_21</child>
+    <pose>0 0 0.21</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_23">
+    <pose>0 0 0.22</pose>
+    <collision name="23">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="23">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 22" type="ball">
+    <parent>link_23</parent>
+    <child>link_22</child>
+    <pose>0 0 0.22</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_24">
+    <pose>0 0 0.23</pose>
+    <collision name="24">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="24">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 23" type="ball">
+    <parent>link_24</parent>
+    <child>link_23</child>
+    <pose>0 0 0.23</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_25">
+    <pose>0 0 0.24</pose>
+    <collision name="25">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="25">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 24" type="ball">
+    <parent>link_25</parent>
+    <child>link_24</child>
+    <pose>0 0 0.24</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_26">
+    <pose>0 0 0.25</pose>
+    <collision name="26">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="26">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 25" type="ball">
+    <parent>link_26</parent>
+    <child>link_25</child>
+    <pose>0 0 0.25</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_27">
+    <pose>0 0 0.26</pose>
+    <collision name="27">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="27">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 26" type="ball">
+    <parent>link_27</parent>
+    <child>link_26</child>
+    <pose>0 0 0.26</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_28">
+    <pose>0 0 0.27</pose>
+    <collision name="28">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="28">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 27" type="ball">
+    <parent>link_28</parent>
+    <child>link_27</child>
+    <pose>0 0 0.27</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_29">
+    <pose>0 0 0.28</pose>
+    <collision name="29">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="29">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 28" type="ball">
+    <parent>link_29</parent>
+    <child>link_28</child>
+    <pose>0 0 0.28</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_30">
+    <pose>0 0 0.29</pose>
+    <collision name="30">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="30">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 29" type="ball">
+    <parent>link_30</parent>
+    <child>link_29</child>
+    <pose>0 0 0.29</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_31">
+    <pose>0 0 0.3</pose>
+    <collision name="31">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="31">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 30" type="ball">
+    <parent>link_31</parent>
+    <child>link_30</child>
+    <pose>0 0 0.3</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_32">
+    <pose>0 0 0.31</pose>
+    <collision name="32">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="32">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 31" type="ball">
+    <parent>link_32</parent>
+    <child>link_31</child>
+    <pose>0 0 0.31</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_33">
+    <pose>0 0 0.32</pose>
+    <collision name="33">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="33">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 32" type="ball">
+    <parent>link_33</parent>
+    <child>link_32</child>
+    <pose>0 0 0.32</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_34">
+    <pose>0 0 0.33</pose>
+    <collision name="34">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="34">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 33" type="ball">
+    <parent>link_34</parent>
+    <child>link_33</child>
+    <pose>0 0 0.33</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_35">
+    <pose>0 0 0.34</pose>
+    <collision name="35">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="35">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 34" type="ball">
+    <parent>link_35</parent>
+    <child>link_34</child>
+    <pose>0 0 0.34</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_36">
+    <pose>0 0 0.35</pose>
+    <collision name="36">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="36">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 35" type="ball">
+    <parent>link_36</parent>
+    <child>link_35</child>
+    <pose>0 0 0.35</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_37">
+    <pose>0 0 0.36</pose>
+    <collision name="37">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="37">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 36" type="ball">
+    <parent>link_37</parent>
+    <child>link_36</child>
+    <pose>0 0 0.36</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_38">
+    <pose>0 0 0.37</pose>
+    <collision name="38">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="38">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 37" type="ball">
+    <parent>link_38</parent>
+    <child>link_37</child>
+    <pose>0 0 0.37</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_39">
+    <pose>0 0 0.38</pose>
+    <collision name="39">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="39">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 38" type="ball">
+    <parent>link_39</parent>
+    <child>link_38</child>
+    <pose>0 0 0.38</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_40">
+    <pose>0 0 0.39</pose>
+    <collision name="40">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="40">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 39" type="ball">
+    <parent>link_40</parent>
+    <child>link_39</child>
+    <pose>0 0 0.39</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_41">
+    <pose>0 0 0.4</pose>
+    <collision name="41">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="41">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 40" type="ball">
+    <parent>link_41</parent>
+    <child>link_40</child>
+    <pose>0 0 0.4</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_42">
+    <pose>0 0 0.41</pose>
+    <collision name="42">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="42">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 41" type="ball">
+    <parent>link_42</parent>
+    <child>link_41</child>
+    <pose>0 0 0.41</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_43">
+    <pose>0 0 0.42</pose>
+    <collision name="43">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="43">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 42" type="ball">
+    <parent>link_43</parent>
+    <child>link_42</child>
+    <pose>0 0 0.42</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_44">
+    <pose>0 0 0.43</pose>
+    <collision name="44">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="44">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 43" type="ball">
+    <parent>link_44</parent>
+    <child>link_43</child>
+    <pose>0 0 0.43</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_45">
+    <pose>0 0 0.44</pose>
+    <collision name="45">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="45">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 44" type="ball">
+    <parent>link_45</parent>
+    <child>link_44</child>
+    <pose>0 0 0.44</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_46">
+    <pose>0 0 0.45</pose>
+    <collision name="46">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="46">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 45" type="ball">
+    <parent>link_46</parent>
+    <child>link_45</child>
+    <pose>0 0 0.45</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_47">
+    <pose>0 0 0.46</pose>
+    <collision name="47">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="47">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 46" type="ball">
+    <parent>link_47</parent>
+    <child>link_46</child>
+    <pose>0 0 0.46</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_48">
+    <pose>0 0 0.47</pose>
+    <collision name="48">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="48">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 47" type="ball">
+    <parent>link_48</parent>
+    <child>link_47</child>
+    <pose>0 0 0.47</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_49">
+    <pose>0 0 0.48</pose>
+    <collision name="49">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="49">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 48" type="ball">
+    <parent>link_49</parent>
+    <child>link_48</child>
+    <pose>0 0 0.48</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_50">
+    <pose>0 0 0.49</pose>
+    <collision name="50">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="50">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 49" type="ball">
+    <parent>link_50</parent>
+    <child>link_49</child>
+    <pose>0 0 0.49</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_51">
+    <pose>0 0 0.5</pose>
+    <collision name="51">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="51">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 50" type="ball">
+    <parent>link_51</parent>
+    <child>link_50</child>
+    <pose>0 0 0.5</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_52">
+    <pose>0 0 0.51</pose>
+    <collision name="52">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="52">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 51" type="ball">
+    <parent>link_52</parent>
+    <child>link_51</child>
+    <pose>0 0 0.51</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_53">
+    <pose>0 0 0.52</pose>
+    <collision name="53">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="53">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 52" type="ball">
+    <parent>link_53</parent>
+    <child>link_52</child>
+    <pose>0 0 0.52</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_54">
+    <pose>0 0 0.53</pose>
+    <collision name="54">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="54">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 53" type="ball">
+    <parent>link_54</parent>
+    <child>link_53</child>
+    <pose>0 0 0.53</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_55">
+    <pose>0 0 0.54</pose>
+    <collision name="55">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="55">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 54" type="ball">
+    <parent>link_55</parent>
+    <child>link_54</child>
+    <pose>0 0 0.54</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_56">
+    <pose>0 0 0.55</pose>
+    <collision name="56">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="56">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 55" type="ball">
+    <parent>link_56</parent>
+    <child>link_55</child>
+    <pose>0 0 0.55</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_57">
+    <pose>0 0 0.56</pose>
+    <collision name="57">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="57">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 56" type="ball">
+    <parent>link_57</parent>
+    <child>link_56</child>
+    <pose>0 0 0.56</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_58">
+    <pose>0 0 0.57</pose>
+    <collision name="58">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="58">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 57" type="ball">
+    <parent>link_58</parent>
+    <child>link_57</child>
+    <pose>0 0 0.57</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_59">
+    <pose>0 0 0.58</pose>
+    <collision name="59">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="59">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 58" type="ball">
+    <parent>link_59</parent>
+    <child>link_58</child>
+    <pose>0 0 0.58</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_60">
+    <pose>0 0 0.59</pose>
+    <collision name="60">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="60">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 59" type="ball">
+    <parent>link_60</parent>
+    <child>link_59</child>
+    <pose>0 0 0.59</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_61">
+    <pose>0 0 0.6</pose>
+    <collision name="61">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="61">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 60" type="ball">
+    <parent>link_61</parent>
+    <child>link_60</child>
+    <pose>0 0 0.6</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_62">
+    <pose>0 0 0.61</pose>
+    <collision name="62">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="62">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 61" type="ball">
+    <parent>link_62</parent>
+    <child>link_61</child>
+    <pose>0 0 0.61</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_63">
+    <pose>0 0 0.62</pose>
+    <collision name="63">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="63">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 62" type="ball">
+    <parent>link_63</parent>
+    <child>link_62</child>
+    <pose>0 0 0.62</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_64">
+    <pose>0 0 0.63</pose>
+    <collision name="64">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="64">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 63" type="ball">
+    <parent>link_64</parent>
+    <child>link_63</child>
+    <pose>0 0 0.63</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_65">
+    <pose>0 0 0.64</pose>
+    <collision name="65">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="65">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 64" type="ball">
+    <parent>link_65</parent>
+    <child>link_64</child>
+    <pose>0 0 0.64</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_66">
+    <pose>0 0 0.65</pose>
+    <collision name="66">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="66">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 65" type="ball">
+    <parent>link_66</parent>
+    <child>link_65</child>
+    <pose>0 0 0.65</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_67">
+    <pose>0 0 0.66</pose>
+    <collision name="67">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="67">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 66" type="ball">
+    <parent>link_67</parent>
+    <child>link_66</child>
+    <pose>0 0 0.66</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_68">
+    <pose>0 0 0.67</pose>
+    <collision name="68">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="68">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 67" type="ball">
+    <parent>link_68</parent>
+    <child>link_67</child>
+    <pose>0 0 0.67</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_69">
+    <pose>0 0 0.68</pose>
+    <collision name="69">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="69">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 68" type="ball">
+    <parent>link_69</parent>
+    <child>link_68</child>
+    <pose>0 0 0.68</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_70">
+    <pose>0 0 0.69</pose>
+    <collision name="70">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="70">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 69" type="ball">
+    <parent>link_70</parent>
+    <child>link_69</child>
+    <pose>0 0 0.69</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_71">
+    <pose>0 0 0.7</pose>
+    <collision name="71">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="71">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 70" type="ball">
+    <parent>link_71</parent>
+    <child>link_70</child>
+    <pose>0 0 0.7</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_72">
+    <pose>0 0 0.71</pose>
+    <collision name="72">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="72">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 71" type="ball">
+    <parent>link_72</parent>
+    <child>link_71</child>
+    <pose>0 0 0.71</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_73">
+    <pose>0 0 0.72</pose>
+    <collision name="73">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="73">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 72" type="ball">
+    <parent>link_73</parent>
+    <child>link_72</child>
+    <pose>0 0 0.72</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_74">
+    <pose>0 0 0.73</pose>
+    <collision name="74">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="74">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 73" type="ball">
+    <parent>link_74</parent>
+    <child>link_73</child>
+    <pose>0 0 0.73</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_75">
+    <pose>0 0 0.74</pose>
+    <collision name="75">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="75">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 74" type="ball">
+    <parent>link_75</parent>
+    <child>link_74</child>
+    <pose>0 0 0.74</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_76">
+    <pose>0 0 0.75</pose>
+    <collision name="76">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="76">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 75" type="ball">
+    <parent>link_76</parent>
+    <child>link_75</child>
+    <pose>0 0 0.75</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_77">
+    <pose>0 0 0.76</pose>
+    <collision name="77">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="77">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 76" type="ball">
+    <parent>link_77</parent>
+    <child>link_76</child>
+    <pose>0 0 0.76</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_78">
+    <pose>0 0 0.77</pose>
+    <collision name="78">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="78">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 77" type="ball">
+    <parent>link_78</parent>
+    <child>link_77</child>
+    <pose>0 0 0.77</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_79">
+    <pose>0 0 0.78</pose>
+    <collision name="79">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="79">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 78" type="ball">
+    <parent>link_79</parent>
+    <child>link_78</child>
+    <pose>0 0 0.78</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_80">
+    <pose>0 0 0.79</pose>
+    <collision name="80">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="80">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 79" type="ball">
+    <parent>link_80</parent>
+    <child>link_79</child>
+    <pose>0 0 0.79</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_81">
+    <pose>0 0 0.8</pose>
+    <collision name="81">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="81">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 80" type="ball">
+    <parent>link_81</parent>
+    <child>link_80</child>
+    <pose>0 0 0.8</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_82">
+    <pose>0 0 0.81</pose>
+    <collision name="82">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="82">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 81" type="ball">
+    <parent>link_82</parent>
+    <child>link_81</child>
+    <pose>0 0 0.81</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_83">
+    <pose>0 0 0.82</pose>
+    <collision name="83">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="83">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 82" type="ball">
+    <parent>link_83</parent>
+    <child>link_82</child>
+    <pose>0 0 0.82</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_84">
+    <pose>0 0 0.83</pose>
+    <collision name="84">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="84">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 83" type="ball">
+    <parent>link_84</parent>
+    <child>link_83</child>
+    <pose>0 0 0.83</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_85">
+    <pose>0 0 0.84</pose>
+    <collision name="85">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="85">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 84" type="ball">
+    <parent>link_85</parent>
+    <child>link_84</child>
+    <pose>0 0 0.84</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_86">
+    <pose>0 0 0.85</pose>
+    <collision name="86">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="86">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 85" type="ball">
+    <parent>link_86</parent>
+    <child>link_85</child>
+    <pose>0 0 0.85</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_87">
+    <pose>0 0 0.86</pose>
+    <collision name="87">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="87">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 86" type="ball">
+    <parent>link_87</parent>
+    <child>link_86</child>
+    <pose>0 0 0.86</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_88">
+    <pose>0 0 0.87</pose>
+    <collision name="88">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="88">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 87" type="ball">
+    <parent>link_88</parent>
+    <child>link_87</child>
+    <pose>0 0 0.87</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_89">
+    <pose>0 0 0.88</pose>
+    <collision name="89">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="89">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 88" type="ball">
+    <parent>link_89</parent>
+    <child>link_88</child>
+    <pose>0 0 0.88</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_90">
+    <pose>0 0 0.89</pose>
+    <collision name="90">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="90">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 89" type="ball">
+    <parent>link_90</parent>
+    <child>link_89</child>
+    <pose>0 0 0.89</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_91">
+    <pose>0 0 0.9</pose>
+    <collision name="91">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="91">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 90" type="ball">
+    <parent>link_91</parent>
+    <child>link_90</child>
+    <pose>0 0 0.9</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_92">
+    <pose>0 0 0.91</pose>
+    <collision name="92">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="92">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 91" type="ball">
+    <parent>link_92</parent>
+    <child>link_91</child>
+    <pose>0 0 0.91</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_93">
+    <pose>0 0 0.92</pose>
+    <collision name="93">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="93">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 92" type="ball">
+    <parent>link_93</parent>
+    <child>link_92</child>
+    <pose>0 0 0.92</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_94">
+    <pose>0 0 0.93</pose>
+    <collision name="94">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="94">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 93" type="ball">
+    <parent>link_94</parent>
+    <child>link_93</child>
+    <pose>0 0 0.93</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_95">
+    <pose>0 0 0.94</pose>
+    <collision name="95">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="95">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 94" type="ball">
+    <parent>link_95</parent>
+    <child>link_94</child>
+    <pose>0 0 0.94</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_96">
+    <pose>0 0 0.95</pose>
+    <collision name="96">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="96">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 95" type="ball">
+    <parent>link_96</parent>
+    <child>link_95</child>
+    <pose>0 0 0.95</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_97">
+    <pose>0 0 0.96</pose>
+    <collision name="97">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="97">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 96" type="ball">
+    <parent>link_97</parent>
+    <child>link_96</child>
+    <pose>0 0 0.96</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_98">
+    <pose>0 0 0.97</pose>
+    <collision name="98">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="98">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 97" type="ball">
+    <parent>link_98</parent>
+    <child>link_97</child>
+    <pose>0 0 0.97</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_99">
+    <pose>0 0 0.98</pose>
+    <collision name="99">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="99">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 98" type="ball">
+    <parent>link_99</parent>
+    <child>link_98</child>
+    <pose>0 0 0.98</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+   <link name="link_100">
+    <pose>0 0 0.99</pose>
+    <collision name="100">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </collision>
+     <visual name="100">
+      <pose>0 0 0</pose>
+      <geometry>
+       <cylinder>
+        <radius>0.012</radius>
+        <length>0.01</length>
+       </cylinder>
+      </geometry>
+     </visual>
+   </link>
+   <joint name="joint 99" type="ball">
+    <parent>link_100</parent>
+    <child>link_99</child>
+    <pose>0 0 0.99</pose>
+    <physics>
+      <ode>
+        <implicit_spring_damper>true</implicit_spring_damper>/
+        <cfm>1000</cfm>
+      </ode>
+    </physics>
+   </joint>
+</model>
+</sdf>
