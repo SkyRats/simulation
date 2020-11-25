@@ -28,7 +28,7 @@ def buildJoint (i, tamanho):
     f.write("   <joint name=\"joint " + str(i) + "\" type=\"ball\">\n")
     f.write("    <parent>link_"+ str(i + 1) + "</parent>\n")
     f.write("    <child>link_" + str(i) + "</child>\n")
-    f.write("    <pose>0 0 " + str(i * tamanho) + "</pose>\n")
+    f.write("    <pose>0 0 " + str(0.5 * tamanho) + "</pose>\n")
     f.write("    <physics>\n")
     f.write("    </physics>\n")
     f.write("   </joint>\n")
