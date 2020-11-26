@@ -60,21 +60,8 @@
       </distribution>
     </population>
 
-<<<<<<< HEAD
     <!-- Ballon -->
-    <model name="ballon">
-      <pose>0 -50 100 0 0 0</pose>
-      <static>true</static>
-      <link name="body">
-        <visual name="visual">
-          <geometry>
-            <mesh><uri>file:..//archives .dae/Cenários/balao.dae</uri></mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>    
-=======
->>>>>>> 82820e172bd75681b25128c8909edbb8d2a42c04
+
 
     <include>
       <uri>model://outdoor_puebla</uri>

@@ -54,5 +54,6 @@
       </material>
       </visual>
     </link>
+    <plugin name ="getDropzonePositions" filename="libgetDropzonePositions.so" />
   </model>
 </sdf>

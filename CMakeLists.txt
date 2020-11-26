@@ -158,6 +158,10 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 #   src/${PROJECT_NAME}/simulation.cpp
 # )
 
+#getDropzonePositions
+add_library(getDropzonePositions SHARED plugins/getDropzonePositions.cpp)
+target_link_libraries(getDropzonePositions ${GAZEBO_LIBRARIES})
+
 # Dynamic Obstacle
 add_library(dynamic_obstacle SHARED plugins/dynamic_obstacle.cpp)
 target_link_libraries(dynamic_obstacle ${GAZEBO_LIBRARIES})
