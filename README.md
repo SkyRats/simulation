@@ -13,6 +13,13 @@ ROS package for PX4-Gazebo-ROS Software-In-The-Loop simulations for the Skyrats 
 ## Launching the simulation
 
 ```bash
+
+# To configure the Skyrats Gazebo Interface
+gedit ~/.gazebo/gui.ini
+# Add this to the end of the file:
+[overlay_plugins]
+filenames=libskyrats_interface.so
+
 # Convenience script for building the PX4 Firmware and setting up Environment Variables
 source scripts/setup.bash
 

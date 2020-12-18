@@ -12,13 +12,12 @@
                 <sor>0.5</sor>
               </solver>
             </ode>
-        </physics> -->
+        </physics> -->   
+
 
         <gui>
-            <plugin name="sample" filename="libgui_example_spawn_widget.so"/>
-            <camera name="spec_cam">
-              <pose>-15.0 -26.0 14.5 0 0.523125 1.062262</pose>
-            </camera>
+     		 
+<plugin name="skyrats_interface" filename="libskyrats_interface.so"/>
         </gui>
 
 

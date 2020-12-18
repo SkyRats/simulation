@@ -54,16 +54,6 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   // Create the layout that sits inside the frame
   QVBoxLayout *frameLayout = new QVBoxLayout();
 
-  //ABAS
-  QTabWidget *abas;
-  QWidget *nes;
-  QWidget *aba_inicial;
-  QWidget *aba_indoor;
-  QWidget *aba_outdoor;
-
-  abas = new QTabWidget(nes);
-  abas->setObjectName(QStringLiteral("abas"));
-  abas->setGeometry(QRect(0, 0, 721, 581));
   //CREATE BUTTONS
   QPushButton *WindButton = new QPushButton(tr("ON/OFF WIND"));
   connect(WindButton, SIGNAL(clicked()), this, SLOT(WindButton()));
@@ -78,18 +68,18 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   // std::string path = GetPath(thisPath);
   // gzmsg << "a: " << path << std::endl;
   QLabel *Skyrats_txt = new QLabel(("Skyrats Simulator v1.0"));
-  QLabel *Skyrats_img = new QLabel(("/home/felipe/workspaces/workshop/ws/src/simulation/include/simulation/imgs/sky_logo.png"));
+  // QLabel *Skyrats_img = new QLabel(("/home/felipe/workspaces/workshop/ws/src/simulation/include/simulation/imgs/sky_logo.png"));
   
   // Skyrats_img->setPixmap(QPixmap("/home/felipe/workspaces/workshop/ws/src/simulation/include/simulation/imgs/sky_logo.png"));
-  QPixmap p("/home/felipe/workspaces/workshop/ws/src/simulation/include/simulation/imgs/sky_logo.png");
-  Skyrats_img->setPixmap(p.scaled(Skyrats_img->width(), Skyrats_img->height(), Qt::KeepAspectRatio));
-  Skyrats_img->setScaledContents(true);
-  Skyrats_img->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+  // QPixmap p("/home/felipe/workspaces/workshop/ws/src/simulation/include/simulation/imgs/sky_logo.png");
+  //Skyrats_img->setPixmap(p.scaled(Skyrats_img->width(), Skyrats_img->height(), Qt::KeepAspectRatio));
+  //Skyrats_img->setScaledContents(true);
+  //Skyrats_img->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
 
   //ADD WIDGETS TO INTERFACE
   frameLayout->addWidget(Skyrats_txt);
 
-  frameLayout->addWidget(Skyrats_img);
+  //frameLayout->addWidget(Skyrats_img);
 
   frameLayout->addWidget(WindButton);
 
