@@ -1,7 +1,8 @@
 # Modo de uso
- * Utilize o Corda.py e digite a quantidade de links que serão utilizados para fazer a corda e o tamanho de cada link.
- * Copie a pasta Rope para os Models e pronto.
- * Nunca exclua ou recorte a pasta Rope, apenas copie e cole no local desejado.
+ * Execute o arquivo Corda.py
+ * Digite a quantidade de links que você deseja e o tamanho de cada link
+ * O recomendado é utilizar entre 10 a 20 links
+ * Quando terminar de executar, a corda estará em "simulation/models/Rope"
 
 Bibliografia:
 https://apps.dtic.mil/dtic/tr/fulltext/u2/a427331.pdf
