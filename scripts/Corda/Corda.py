@@ -4,6 +4,9 @@ def buildLink(i,tamanho):
     f.write("   <link name=\"link_" + str(i + 1) + "\">\n")
     f.write("    <pose>0 0 " + str(i * tamanho) + "</pose>\n")
     #Bobao lembre que esta faltando a Inercia
+    f.write("    <inertial>\n")
+    f.write("    <mass>" + str(1 * tamanho) + "</mass>\n")
+    f.write("    </inertial>\n")
     f.write("    <collision name=\"" + str(i + 1) + "\">\n")
     f.write("      <pose>0 0 0</pose>\n")
     f.write("      <geometry>\n")
@@ -30,6 +33,7 @@ def buildJoint (i, tamanho):
     f.write("    <child>link_" + str(i) + "</child>\n")
     f.write("    <pose>0 0 " + str(0.5 * tamanho) + "</pose>\n")
     f.write("    <physics>\n")
+    # f.write("      <implicit_spring_damper>1</implicit_spring_damper>\n")  //Teste para uma futura implementacao
     f.write("    </physics>\n")
     f.write("   </joint>\n")
 
@@ -37,8 +41,7 @@ def buildJoint (i, tamanho):
 
 tamanho = float(input("Por favor, insira o tamanho de cada link: "))
 quantidade = int(input("Por favor, insira a quantidade de links: "))
-
-f = open("./Rope/model.sdf", "w")
+f = open("../../models/Rope/model.sdf", "w")
 f.write("<?xml version=\"1.0\"?>")
 f.write("<sdf version=\"1.5\">\n")
 f.write(" <model name=\"Corda\">\n")
