@@ -24,6 +24,20 @@
       <shadows>1</shadows>
     </scene>
 
+    <!-- SPAWN -->
+    <include>
+      <static>true</static>
+      <uri>model://2020_2.2ceiling</uri>
+      <name>spawn1</name>
+      <pose>66 10.5 10.5 0 0 0</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://2020_2.2ceiling</uri>
+      <name>spawn2</name>
+      <pose>66 12.5 10.5 0 0 0</pose>
+    </include>
+
 
     <!-- DROP ZONES -->
     <population name="drop_zone_clean">
