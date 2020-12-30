@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6">
+    <model name="swarm_box">
+        <link name="link_box">
+            <pose>0 0 0.5 0 0 0</pose>
+            <inertial>
+                <mass>1</mass>
+                <inertia>
+                    <ixx>0.166666</ixx>
+                    <iyy>0.166666</iyy>
+                    <izz>0.166666</izz>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyz>0</iyz>
+                </inertia>
+            </inertial>
+
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.5 0.5 0.2</size>
+                    </box>
+                </geometry>
+                <material>
+                    <lighting>1</lighting>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Grey</name>
+                    </script>
+                    <shader type='vertex'>
+                        <normal_map>__default__</normal_map>
+                    </shader>
+                    <ambient>1 0 0 1</ambient>
+                    <diffuse>0.99 0.66 0.12 1</diffuse>
+                    <specular>0.01 0.01 0.01 1</specular>
+                    <emissive>1 0 0 1</emissive>
+                </material>
+                <transparency>0</transparency>
+                <cast_shadows>1</cast_shadows>
+            </visual>
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>0.5 0.5 0.2</size>
+                    </box>
+                </geometry>
+            </collision>
+        </link><!-- 
+        <link name="link_1">
+            <pose>0 0 0.0</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="1">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="1">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <link name="link_2">
+            <pose>0 0 0.1</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="2">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="2">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 1" type="ball">
+            <parent>link_2</parent>
+            <child>link_1</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_3">
+            <pose>0 0 0.2</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="3">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="3">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 2" type="ball">
+            <parent>link_3</parent>
+            <child>link_2</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_4">
+            <pose>0 0 0.3</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="4">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="4">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 3" type="ball">
+            <parent>link_4</parent>
+            <child>link_3</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_5">
+            <pose>0 0 0.4</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="5">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="5">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 4" type="ball">
+            <parent>link_5</parent>
+            <child>link_4</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_6">
+            <pose>0 0 0.5</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="6">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="6">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 5" type="ball">
+            <parent>link_6</parent>
+            <child>link_5</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_7">
+            <pose>0 0 0.6</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="7">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="7">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 6" type="ball">
+            <parent>link_7</parent>
+            <child>link_6</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_8">
+            <pose>0 0 0.7</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="8">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="8">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 7" type="ball">
+            <parent>link_8</parent>
+            <child>link_7</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_9">
+            <pose>0 0 0.8</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="9">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="9">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 8" type="ball">
+            <parent>link_9</parent>
+            <child>link_8</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <link name="link_10">
+            <pose>0 0 0.9</pose>
+            <inertial>
+            <mass>0.1</mass>
+            </inertial>
+            <collision name="10">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </collision>
+             <visual name="10">
+              <pose>0 0 0</pose>
+              <geometry>
+               <cylinder>
+                <radius>0.012</radius>
+                <length>0.1</length>
+               </cylinder>
+              </geometry>
+             </visual>
+           </link>
+           <joint name="joint 9" type="ball">
+            <parent>link_10</parent>
+            <child>link_9</child>
+            <pose>0 0 0.05</pose>
+            <physics>
+            </physics>
+           </joint>
+           <joint name="joint box 1" type="ball">
+            <parent>link_10</parent>
+            <child>link_9</child>
+            <pose>0 0.25 0.2</pose>
+            <physics>
+            </physics>
+           </joint> -->
+    </model>
+</sdf>
