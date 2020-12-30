@@ -32,6 +32,7 @@ namespace gazebo
     public:
         void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf)
         {
+            
             this->world = _world;
             std::cout << "[rope_plugin] rope_plugin loaded to world" << std::endl;
 
@@ -40,7 +41,7 @@ namespace gazebo
             std::string model2_name = _sdf->Get<std::string>("model2");
             this->model1 = this->world->ModelByName(model1_name);
             this->model2 = this->world->ModelByName(model2_name);
-
+            
             // Model links
             this->model1_link = this->model1->GetLinks()[0];
             this->model2_link = this->model2->GetLinks()[0];
