@@ -186,7 +186,7 @@ target_link_libraries(gazebo_wind_plugin ${GAZEBO_LIBRARIES})
 qt5_wrap_cpp(QT_MOC include/simulation/skyrats_interface.hh)
 
 # Attach plugin
-add_library(attach_rope SHARED attach_rope.cc)
+add_library(attach_rope SHARED plugins/attach_rope.cc)
 target_link_libraries(attach_rope  ${GAZEBO_LIBRARIES})
 
 
