@@ -4,7 +4,7 @@ FIRMWARE_BUILD_DIR="$HOME/src/Firmware/build/px4_sitl_default"
 
 # Types of drones
 declare -a TYPES_OF_DRONES
-TYPES_OF_DRONES="iris iris_depth_camera iris_downward_depth_camera iris_fpv_cam iris_rplidar iris_stereo_camera"
+TYPES_OF_DRONES="ropped_iris ropped_swarm iris iris_depth_camera iris_downward_depth_camera iris_fpv_cam iris_rplidar iris_stereo_camera"
 
 cd $FIRMWARE_DIR 
 
