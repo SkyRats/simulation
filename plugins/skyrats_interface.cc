@@ -1,20 +1,3 @@
-  /*
- * Copyright (C) 2014 Open Source Robotics Foundation
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
-*/
-
 #include <sstream>
 #include <gazebo/msgs/msgs.hh>
 #include "simulation/skyrats_interface.hh"
@@ -64,6 +47,9 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   QPushButton *ObstacleButton = new QPushButton(tr("ON/OFF OBSTACLE"));
   connect(ObstacleButton, SIGNAL(clicked()), this, SLOT(ObstacleButton()));
 
+  QPushButton *AttachButton = new QPushButton(tr("Rope Attach"));
+  connect(AttachButton, SIGNAL(clicked()), this, SLOT(AttachButton()));
+
   //CREATE IMG BOX
   // std::string path = GetPath(thisPath);
   // gzmsg << "a: " << path << std::endl;
@@ -88,7 +74,14 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   frameLayout->addWidget(ObstacleButton);
 
   QLabel *indoor_txt = new QLabel(("Indoor Simulation"));
+  
   frameLayout->addWidget(indoor_txt);
+
+  frameLayout->addWidget(AttachButton);
+
+  QLabel *outdoor_txt = new QLabel(("Outdoor Simulation"));
+  
+  frameLayout->addWidget(outdoor_txt);
 
   // Add frameLayout to the frame
   mainFrame->setLayout(frameLayout);
@@ -104,7 +97,7 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
 
   // Position and resize this widget
   this->move(10, 10);
-  this->resize(160, 210);
+  this->resize(160, 235);
 
   // Create a node for transportation
   this->node = transport::NodePtr(new transport::Node());
@@ -116,6 +109,8 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   this->smoke_pub = this->node->Advertise<msgs::Scene>("~/scene");
 
   this->obstacle_toggle_pub = this->node->Advertise<msgs::Int>("~/obstacle_toggle");
+
+  this->attach_pub = this->node->Advertise<msgs::Int>("~/rope_attach");
 }
 
 /////////////////////////////////////////////////
@@ -167,6 +162,16 @@ void GUIExampleSpawnWidget::ObstacleButton()
   this->obstacle_toggle_pub->Publish(obstacle_msg);
   gzmsg << "Obstacle status: " << obstacle_status << std::endl;
 }
+
+void GUIExampleSpawnWidget::AttachButton()
+{
+  gzmsg << "Rope attached message sent..." << std::endl;
+  msgs::Int attach_msg;
+  attach_msg.set_data(1);
+  this->attach_pub->Publish(attach_msg);
+}
+
+
 
 
 

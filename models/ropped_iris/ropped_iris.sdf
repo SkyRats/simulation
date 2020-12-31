@@ -1,6 +1,12 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
   <model name='ropped_iris'>
+
+        <!-- <include>
+            <plugin name = 'attach_rope' filename = 'libattach_rope.so'></plugin>
+            <uri>model://swarm_box</uri>
+        </include> -->
+
     <pose>0 0 1 0 0 0</pose>
     <model name='swarm_box'>
       <model name='Corda'>

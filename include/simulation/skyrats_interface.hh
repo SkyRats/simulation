@@ -58,6 +58,8 @@ namespace gazebo
 
       protected slots: void ObstacleButton();
 
+      protected slots: void AttachButton();
+
       /// \brief Counter used to create unique model names
       private: unsigned int counter;
 
@@ -72,6 +74,8 @@ namespace gazebo
       private: transport::PublisherPtr smoke_pub;
 
       private: transport::PublisherPtr obstacle_toggle_pub;
+
+      private: transport::PublisherPtr attach_pub;
 
       private: bool wind_status;
 
