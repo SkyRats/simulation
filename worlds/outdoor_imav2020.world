@@ -109,7 +109,10 @@
     </population>
 
     <!-- Ballon -->
-
+    <include>
+      <uri>model://ballon</uri>
+      <pose>66 20 30 0 0 0</pose>
+    </include>
 
     <include>
       <uri>model://outdoor_puebla</uri>
