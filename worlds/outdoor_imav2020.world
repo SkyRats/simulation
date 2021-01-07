@@ -25,6 +25,26 @@
       <shadows>1</shadows>
     </scene>
 
+    <!-- REF -->
+    <include>
+      <static>true</static>
+      <uri>model://hot_box</uri>
+      <name>POS_REF</name>
+      <pose>0 0.5 1.25 0 0 0</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://hot_box</uri>
+      <name>NEG_REF</name>
+      <pose>0 -0.5 1.25 0 0 0</pose>
+    </include>
+    <include>
+      <static>true</static>
+      <uri>model://hot_box</uri>
+      <name>NULL_REF</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
     <!-- SPAWN -->
     <include>
       <static>true</static>
