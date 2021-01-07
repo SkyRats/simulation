@@ -7,21 +7,14 @@
         <cast_shadows>true</cast_shadows>
         <geometry>
           <mesh>
-            <uri>model://ballon/meshes/balao.stl</uri>
+            <uri>model://ballon/meshes/balao_sem_logo.dae</uri>
           </mesh>
         </geometry>
-        <material>
-          <script>
-            <uri>file://ballon/materials/scripts</uri>
-            <uri>file://ballon/materials/textures</uri>
-            <name>ballon</name>
-          </script>
-        </material>
       </visual>
       <collision name="collision_ballon">
         <geometry>
           <mesh>
-            <uri>model://ballon/meshes/balao.stl</uri>
+            <uri>model://ballon/meshes/balao_sem_logo.dae</uri>
           </mesh>
         </geometry>
       </collision>
