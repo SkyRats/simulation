@@ -14,7 +14,7 @@
         <link name='link_1'>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='1'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -38,7 +38,7 @@
         <link name='link_2'>
           <pose frame=''>0 0 0.1 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='2'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -68,7 +68,7 @@
         <link name='link_3'>
           <pose frame=''>0 0 0.2 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='3'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -98,7 +98,7 @@
         <link name='link_4'>
           <pose frame=''>0 0 0.3 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='4'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -128,7 +128,7 @@
         <link name='link_5'>
           <pose frame=''>0 0 0.4 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='5'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -158,7 +158,7 @@
         <link name='link_6'>
           <pose frame=''>0 0 0.5 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='6'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -188,7 +188,7 @@
         <link name='link_7'>
           <pose frame=''>0 0 0.6 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='7'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -218,7 +218,7 @@
         <link name='link_8'>
           <pose frame=''>0 0 0.7 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='8'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -248,7 +248,7 @@
         <link name='link_9'>
           <pose frame=''>0 0 0.8 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='9'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -278,7 +278,7 @@
         <link name='link_10'>
           <pose frame=''>0 0 0.9 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='10'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -312,7 +312,7 @@
         <link name='link_1'>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='1'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -336,7 +336,7 @@
         <link name='link_2'>
           <pose frame=''>0 0 0.1 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='2'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -366,7 +366,7 @@
         <link name='link_3'>
           <pose frame=''>0 0 0.2 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='3'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -396,7 +396,7 @@
         <link name='link_4'>
           <pose frame=''>0 0 0.3 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='4'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -426,7 +426,7 @@
         <link name='link_5'>
           <pose frame=''>0 0 0.4 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='5'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -456,7 +456,7 @@
         <link name='link_6'>
           <pose frame=''>0 0 0.5 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='6'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -486,7 +486,7 @@
         <link name='link_7'>
           <pose frame=''>0 0 0.6 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='7'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -516,7 +516,7 @@
         <link name='link_8'>
           <pose frame=''>0 0 0.7 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='8'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -546,7 +546,7 @@
         <link name='link_9'>
           <pose frame=''>0 0 0.8 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='9'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -576,7 +576,7 @@
         <link name='link_10'>
           <pose frame=''>0 0 0.9 0 -0 0</pose>
           <inertial>
-            <mass>0.1</mass>
+            <mass>0.01</mass>
           </inertial>
           <collision name='10'>
             <pose frame=''>0 0 0 0 -0 0</pose>
@@ -608,7 +608,7 @@
       <model name='swarm_box'>
         <link name='link_box'>
           <pose frame=''>0 0 0.5 0 -0 0</pose>
-          <inertial>
+          <!-- <inertial> ATRAPALHA A MASSA ISSO AQ
             <mass>1</mass>
             <inertia>
               <ixx>0.166666</ixx>
@@ -618,7 +618,7 @@
               <ixz>0</ixz>
               <iyz>0</iyz>
             </inertia>
-          </inertial>
+          </inertial> -->
           <visual name='visual'>
             <geometry>
               <box>
