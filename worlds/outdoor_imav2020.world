@@ -44,6 +44,12 @@
       <name>NULL_REF</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
+    <include>
+      <static>true</static>
+      <uri>model://hot_box</uri>
+      <name>FAR_REF</name>
+      <pose>0 0 -10 0 0 0</pose>
+    </include>
 
     <!-- SPAWN -->
     <include>
@@ -64,7 +70,7 @@
       <static>false</static>
       <uri>model://ropped_iris</uri>
       <name>swarm_box</name>
-      <pose>66 10.5 13 0 0 0</pose>
+      <pose>66 10.5 11.610644 0 0 0</pose>
     </include>
 
     <!-- DROP ZONES -->
@@ -103,7 +109,10 @@
     </population>
 
     <!-- Ballon -->
-
+    <include>
+      <uri>model://ballon</uri>
+      <pose>66 20 30 0 0 0</pose>
+    </include>
 
     <include>
       <uri>model://outdoor_puebla</uri>

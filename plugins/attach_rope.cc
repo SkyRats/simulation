@@ -4,7 +4,7 @@
 namespace gazebo {
 
     void attach_rope::AttachCallback(ConstIntPtr &msg){
-        gzmsg << "Attaching rope..." << std::endl;
+        
         
         physics::JointPtr joint_1;
         physics::JointPtr joint_2;
@@ -22,6 +22,22 @@ namespace gazebo {
         physics::ModelPtr POSREF = this->world->ModelByName("POS_REF");
         physics::ModelPtr NEGREF = this->world->ModelByName("NEG_REF");
         physics::ModelPtr NULLREF = this->world->ModelByName("NULL_REF");
+        physics::ModelPtr FARREF = this->world->ModelByName("FAR_REF");
+        physics::ModelPtr spawn1 = this->world->ModelByName("spawn1");
+        physics::ModelPtr spawn2 = this->world->ModelByName("spawn2");
+
+        //REMOVER CHAO
+        bool f = false;
+        bool t = true;
+        try{
+        spawn1->SetWorldPose(FARREF->WorldPose());
+        spawn2->SetWorldPose(FARREF->WorldPose());
+        gzmsg << " \tDeleting ground..." << std::endl;
+        } catch(std::runtime_error *e) {
+            gzmsg << "GROUND REMOVE FAILED" << std::endl;
+        }
+
+        gzmsg << "\tAttaching rope..." << std::endl;
         // Joint_1
         joint_1 = this->world->Physics()->CreateJoint("ball", corda_0);
         joint_1->Load(corda_0->GetLink("link_10"), iris_0->GetLink("base_link"), NULLREF->WorldPose());
@@ -37,6 +53,8 @@ namespace gazebo {
         joint_2->Init();
         //link_10 e o mais em cima da corda
         //base_link do iris
+        spawn1->SetWorldPose(NULLREF->WorldPose());
+        spawn2->SetWorldPose(NULLREF->WorldPose());
     }
     
     void attach_rope::Load(physics::WorldPtr _parent, sdf::ElementPtr _sdf)
