@@ -19,6 +19,10 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${SIMULATION_DIR}/../../devel/lib
 
+# Setup skyrats interface for gazebo
+ > ~/.gazebo/gui.ini
+echo -e "[geometry]\nx=0\ny=0\n[overlay_plugins]\nfilenames=libskyrats_interface.so" >> ~/.gazebo/gui.ini
+
 #roslaunch dronecontrol swarm2.launch
 #roslaunch dronecontrol test.launch
 
@@ -68,6 +72,13 @@ then
         if [ $launchfile -eq $counter ]
         then
         echo "Choosed launch file $entry "
+                echo $entry
+
+        if [ $entry = "swarm_imav2020.launch" ]
+        then
+        gnome-terminal -- gedit ${SIMULATION_DIR}/launch/README.md
+        fi
+
         roslaunch simulation $entry
 
         fi
@@ -134,3 +145,4 @@ then
     
 
 fi
+

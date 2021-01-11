@@ -31,6 +31,12 @@ source ${FIRMWARE_DIR}/Tools/setup_gazebo.bash ${FIRMWARE_DIR} ${FIRMWARE_BUILD_
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${FIRMWARE_DIR}
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:${FIRMWARE_DIR}/Tools/sitl_gazebo
 
+# Setup skyrats interface for gazebo
+ > ~/.gazebo/gui.ini
+echo -e "[geometry]\nx=0\ny=0\n[overlay_plugins]\nfilenames=libskyrats_interface.so" >> ~/.gazebo/gui.ini
+
 echo -e "ROS_PACKAGE_PATH $ROS_PACKAGE_PATH"
 
 popd
+
+gedit ../launch/README.md
