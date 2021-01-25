@@ -120,7 +120,7 @@
         <!-- The H -->
         <include>
           <name>H</name>
-          <uri>model://droneponto</uri>
+          <uri>model://H</uri>
           <pose>6.938190 -9.295987 0 0 0 0</pose>
           <scale>2 2 2</scale>
         </include>
