@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="H_world">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <gui>
+    <camera name = 'cam'>
+    <pose>-15 15 40 0 0.6 -0.8</pose>
+    </camera>
+    </gui>
+  
+
+    <model name='building' >
+            <static>true</static>
+            <pose>0 0 15 0 0 0 </pose>
+      <link name='link' >
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>1.5 1.5 30</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>1.5 1.5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
