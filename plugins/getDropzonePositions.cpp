@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 
-static const double equatorial_radius = 63781970;
+static const double equatorial_radius = 6378.1970;
 static const double flattening = 1.0/298.257223563;
 static const double excentrity2 = 2*flattening - flattening*flattening;
 
