@@ -27,6 +27,8 @@
 #include "gazebo/physics/physics.hh"
 #include "gazebo/sensors/Noise.hh"
 
+
+
 #include <gazebo/msgs/msgs.hh>
 
 #include <gazebo/rendering/rendering.hh>
@@ -60,6 +62,8 @@ namespace gazebo
 
       protected slots: void AttachButton();
 
+      protected slots: void DropzonePoseButton();
+
       /// \brief Counter used to create unique model names
       private: unsigned int counter;
 
@@ -76,6 +80,8 @@ namespace gazebo
       private: transport::PublisherPtr obstacle_toggle_pub;
 
       private: transport::PublisherPtr attach_pub;
+
+      private: transport::PublisherPtr dropzones_pub;
 
       private: bool wind_status;
 

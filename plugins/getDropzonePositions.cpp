@@ -1,5 +1,7 @@
  
 #include "../include/simulation/getDropzonePositions.h"
+#include <iostream>
+#include <fstream>
 
 static const double equatorial_radius = 6378197.0;
 static const double flattening = 1.0/298.257223563;
@@ -12,6 +14,10 @@ static const double DEFAULT_REFERENCE_ALTITUDE  = 0.0;
 
 namespace gazebo
 {
+
+    void getDropzonePositions::DropzonesCallback(ConstIntPtr &msg){
+        gzmsg << "Dropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
+    }
     // Pointer to the model
     physics::ModelPtr model;
 
@@ -47,18 +53,67 @@ namespace gazebo
     // Called on model creation
     void getDropzonePositions::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
     {
+
+        //if (_sdf->HasElement("robotNamespace"))
+        //    namespace_ = _sdf->GetElement("robotNamespace")->Get<std::string>();
+        //else
+        //    gzerr << "[a";
+        //gzmsg << "AQUI1" << std::endl;
+        node_handle_ = transport::NodePtr(new transport::Node());
+        node_handle_->Init(namespace_);
+        //gzmsg << "AQUI2" << std::endl;
+        dropzone_sub = node_handle_->Subscribe("~/dropzones_pos", &getDropzonePositions::DropzonesCallback, this);
+        
         Setup(_sdf);
         ignition::math::Pose3d dz_clean_pose = _parent->WorldPose();
         ignition::math::Vector3<double> dzc_p = dz_clean_pose.Pos();
-        double CP_V[3] = {dzc_p.X(), dzc_p.Y(), dzc_p.Z() };
-
+        this->CP_V[0] = dzc_p.X();
+        this->CP_V[1] = dzc_p.Y();
+        this->CP_V[2] = dzc_p.Z();
+        
         physics::WorldPtr puebla = _parent->GetWorld();
-        physics::ModelPtr iris = puebla->ModelByName("iris");
-        ignition::math::Pose3d iris_pose = iris->WorldPose();
+          physics::ModelPtr iris;
+          int iris_status = 0;
+        try{
+        iris = puebla->ModelByName("spawn2"); iris_status = 1;} catch(std::runtime_error *e) {}
+        //try{
+        //if(iris_status == 0) iris = puebla->ModelByName("iris_0");} catch(std::runtime_error *e) {}
+        ignition::math::Pose3d iris_pose;
+        iris_pose = iris->WorldPose();
+        
         ignition::math::Vector3<double> iris_p = iris_pose.Pos();
-        double Iris_V[3] = {iris_p.X(), iris_p.Y(), iris_p.Z() };
+        
+        this->Iris_V[0] = iris_p.X();
+        this->Iris_V[1] = iris_p.Y();
+        this->Iris_V[2] = iris_p.Z();
+        
+        //gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
+        gzmsg << "Dropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
 
-        gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
-        gzmsg << "Dropzone pose:"<< "\n\tX = " << CP_V[0] - Iris_V[0]  << "\n\tY = " << CP_V[1] - Iris_V[1] << "\n\tZ = " << CP_V[2] - Iris_V[2] << std::endl;
+        //Write in txt file
+        /*
+        std::ofstream file; std::ifstream ifile;
+
+        ifile.open("logs/dropzoneposes.txt", std::ios::ate);
+        int str, number, status = 0;
+        ifile >> str;
+        if (str < 3){
+            number = str + 1;
+        }
+        else if (str == 3){
+            status = 1;
+        }
+        ifile.close();
+
+        if(status == 1)
+            file.open("logs/dropzoneposes.txt");
+        else
+            file.open("logs/dropzoneposes.txt", std::ios::app);
+        
+        file <<  "Dropzone pose:"<< "\tX = " << CP_V[0] - Iris_V[0]  << "\tY = " << CP_V[1] - Iris_V[1] << "\tZ = " << CP_V[2] - Iris_V[2];
+        file << number;
+        file.close();*/
     }
+
+
     };

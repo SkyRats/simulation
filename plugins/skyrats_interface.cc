@@ -50,6 +50,9 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   QPushButton *AttachButton = new QPushButton(tr("Rope Attach"));
   connect(AttachButton, SIGNAL(clicked()), this, SLOT(AttachButton()));
 
+  QPushButton *DropzonePoseButton = new QPushButton(tr("Get Dropzone Poses"));
+  connect(DropzonePoseButton, SIGNAL(clicked()), this, SLOT(DropzonePoseButton()));
+
   //CREATE IMG BOX
   // std::string path = GetPath(thisPath);
   // gzmsg << "a: " << path << std::endl;
@@ -79,6 +82,8 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
 
   frameLayout->addWidget(AttachButton);
 
+  frameLayout->addWidget(DropzonePoseButton);
+
   QLabel *outdoor_txt = new QLabel(("Outdoor Simulation"));
   
   frameLayout->addWidget(outdoor_txt);
@@ -97,7 +102,7 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
 
   // Position and resize this widget
   this->move(10, 10);
-  this->resize(160, 235);
+  this->resize(160, 265);
 
   // Create a node for transportation
   this->node = transport::NodePtr(new transport::Node());
@@ -111,6 +116,8 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
   this->obstacle_toggle_pub = this->node->Advertise<msgs::Int>("~/obstacle_toggle");
 
   this->attach_pub = this->node->Advertise<msgs::Int>("~/rope_attach");
+
+  this->dropzones_pub = this->node->Advertise<msgs::Int>("~/dropzones_pos");
 }
 
 /////////////////////////////////////////////////
@@ -171,6 +178,13 @@ void GUIExampleSpawnWidget::AttachButton()
   this->attach_pub->Publish(attach_msg);
 }
 
+void GUIExampleSpawnWidget::DropzonePoseButton()
+{
+  gzmsg << "Sending coordinates..." << std::endl;
+  msgs::Int dropzones_msg;
+  dropzones_msg.set_data(1);
+  this->dropzones_pub->Publish(dropzones_msg);
+}
 
 
 

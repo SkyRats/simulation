@@ -5,7 +5,7 @@
         <arg name="sdf" value="$(find simulation)/models/iris_lidar_downward/model.sdf"/>
         <arg name="world" value="$(find simulation)/worlds/outdoor_imav2020.world" />
         <arg name="x" value="66"/>
-        <arg name="y" value="13"/>
+        <arg name="y" value="12.5"/>
         <arg name="z" value="12"/>
     </include>
 </launch>
