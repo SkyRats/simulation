@@ -46,6 +46,14 @@ namespace gazebo
         ignition::math::Pose3d dz_clean_pose = _parent->WorldPose();
         ignition::math::Vector3<double> dzc_p = dz_clean_pose.Pos();
         double CP_V[3] = {dzc_p.X(), dzc_p.Y(), dzc_p.Z() };
-        gzmsg << "Dropzone pose:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
+
+        physics::WorldPtr puebla = _parent->GetWorld();
+        physics::ModelPtr iris = puebla->ModelByName("iris");
+        ignition::math::Pose3d iris_pose = iris->WorldPose();
+        ignition::math::Vector3<double> iris_p = iris_pose.Pos();
+        double Iris_V[3] = {iris_p.X(), iris_p.Y(), iris_p.Z() };
+
+        gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
+        gzmsg << "Dropzone pose:"<< "\n\tX = " << CP_V[0] - Iris_V[0]  << "\n\tY = " << CP_V[1] - Iris_V[1] << "\n\tZ = " << CP_V[2] - Iris_V[2] << std::endl;
     }
     };
