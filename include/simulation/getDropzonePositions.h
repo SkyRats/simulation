@@ -25,6 +25,11 @@ namespace gazebo
             double radius_north_;
             double radius_east_;
 
+            double longitude;
+            double latitude;
+
+            physics::ModelPtr Tmodel;
+
             double CP_V[3];
             double Iris_V[3];
 

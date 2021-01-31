@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 
-static const double equatorial_radius = 6378197.0;
+static const double equatorial_radius = 63781970;
 static const double flattening = 1.0/298.257223563;
 static const double excentrity2 = 2*flattening - flattening*flattening;
 
@@ -16,7 +16,9 @@ namespace gazebo
 {
 
     void getDropzonePositions::DropzonesCallback(ConstIntPtr &msg){
-        gzmsg << "Dropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
+        gzmsg << "\nDropzone type: " << this->Tmodel->GetName() << std::endl;
+        gzmsg << "\nDropzone GPS:\n\t Latitude = " << this->latitude << "\n\t Longitude = " << this->longitude << "\n"<< std::endl;
+        gzmsg << "\nDropzone cartesian pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
     }
     // Pointer to the model
     physics::ModelPtr model;
@@ -38,8 +40,8 @@ namespace gazebo
         //_sdf->GetElement("latitude_deg")->GetValue()->Get(reference_latitude_);
         //_sdf->GetElement("longitude_deg")->GetValue()->Get(reference_longitude_);
         //_sdf->GetElement("heading_deg")->GetValue()->Get(reference_heading_);
-        reference_latitude_ = 18.635216;
-        reference_longitude_ = -98.522657;
+        reference_latitude_ = 18.63521599999999978;
+        reference_longitude_ = -98.52265699999999526;
         reference_heading_ = 0;
 
         reference_heading_ *= M_PI/180.0;
@@ -53,7 +55,7 @@ namespace gazebo
     // Called on model creation
     void getDropzonePositions::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
     {
-
+        this->Tmodel = _parent;
         //if (_sdf->HasElement("robotNamespace"))
         //    namespace_ = _sdf->GetElement("robotNamespace")->Get<std::string>();
         //else
@@ -86,9 +88,13 @@ namespace gazebo
         this->Iris_V[0] = iris_p.X();
         this->Iris_V[1] = iris_p.Y();
         this->Iris_V[2] = iris_p.Z();
+
         
-        //gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
-        gzmsg << "Dropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
+        this->latitude = reference_latitude_  + 1.0*( cos(reference_heading_) * this->CP_V[0] + sin(reference_heading_) * this->CP_V[1]) / radius_north_ * 180.0/M_PI;
+        this->longitude = reference_longitude_ - 1.0*(-sin(reference_heading_) * this->CP_V[0] + cos(reference_heading_) * this->CP_V[1]) / radius_east_  * 180.0/M_PI;
+
+        gzmsg << "Dropzone GPS:\n\t Latitude = " << this->latitude << "\n\t Longitude = " << this->longitude << "\n"<< std::endl;
+        gzmsg << "\nDropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
 
         //Write in txt file
         /*
