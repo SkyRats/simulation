@@ -25,6 +25,7 @@
       <shadows>1</shadows>
     </scene>
 
+
     <!-- REF -->
     <include>
       <static>true</static>
@@ -82,6 +83,7 @@
         </include>
       </model>
       <pose>0 0 11 0 0 0</pose>
+
       <box>
         <size>120 120 0.01</size>
       </box>
