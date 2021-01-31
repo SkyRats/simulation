@@ -3,13 +3,10 @@
 #include <iostream>
 #include <fstream>
 
-static const double equatorial_radius = 6378197.0;
+static const double equatorial_radius = 6378.1970;
 static const double flattening = 1.0/298.257223563;
 static const double excentrity2 = 2*flattening - flattening*flattening;
 
-static const double DEFAULT_REFERENCE_LATITUDE = 49.9;
-static const double DEFAULT_REFERENCE_LONGITUDE = 8.9;
-static const double DEFAULT_REFERENCE_HEADING   = 0.0;
 static const double DEFAULT_REFERENCE_ALTITUDE  = 0.0;
 
 namespace gazebo
@@ -30,14 +27,8 @@ namespace gazebo
     // Setup
     void getDropzonePositions::Setup(sdf::ElementPtr _sdf) 
     {
-        reference_latitude_ = DEFAULT_REFERENCE_LATITUDE;
-        reference_longitude_ = DEFAULT_REFERENCE_LONGITUDE;
-        reference_heading_ = DEFAULT_REFERENCE_HEADING;
         reference_altitude_ = DEFAULT_REFERENCE_ALTITUDE;
 
-        //_sdf->GetElement("latitude_deg")->GetValue()->Get(reference_latitude_);
-        //_sdf->GetElement("longitude_deg")->GetValue()->Get(reference_longitude_);
-        //_sdf->GetElement("heading_deg")->GetValue()->Get(reference_heading_);
         reference_latitude_ = 18.635216;
         reference_longitude_ = -98.522657;
         reference_heading_ = 0;
@@ -87,7 +78,7 @@ namespace gazebo
         this->Iris_V[1] = iris_p.Y();
         this->Iris_V[2] = iris_p.Z();
         
-        //gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
+        gzmsg << "Dropzone GPS:\n\t Latitude = " << reference_latitude_  + ( cos(reference_heading_) * CP_V[0] + sin(reference_heading_) * CP_V[1]) / radius_north_ * 180.0/M_PI << "\n\t Longitude = " << reference_longitude_ - (-sin(reference_heading_) * CP_V[0] + cos(reference_heading_) * CP_V[1]) / radius_east_  * 180.0/M_PI << "\n"<< std::endl;
         gzmsg << "Dropzone pose:"<< "\n\tX = " << this->CP_V[0] - this->Iris_V[0]  << "\n\tY = " << this->CP_V[1] - this->Iris_V[1] << "\n\tZ = " << this->CP_V[2] - this->Iris_V[2] << std::endl;
 
         //Write in txt file
