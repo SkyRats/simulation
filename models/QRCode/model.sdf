@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="QRCode">
+    <static>true</static>
+    <link name="QRCode_link">
+      <visual name="visual_QRCode">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://QRCode/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://QRCode/materials/scripts</uri>
+            <uri>file://QRCode/materials/textures</uri>
+            <name>QRCode</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_QRCode">
+        <geometry>
+          <mesh>
+            <uri>model://QRCode/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
