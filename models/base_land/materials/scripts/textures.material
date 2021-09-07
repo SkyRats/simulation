@@ -1,0 +1,18 @@
+material base_land
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture base_land.png
+      }
+    }
+  }
+}
+
+  
+
+

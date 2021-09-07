@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="base_land">
+    <static>true</static>
+    <link name="base_land_link">
+      <visual name="visual_base_land">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://base_land/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://base_land/materials/scripts</uri>
+            <uri>file://base_land/materials/textures</uri>
+            <name>base_land</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_base_land">
+        <geometry>
+          <mesh>
+            <uri>model://base_land/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="sea_plane_link">
+      <collision name="sea_plane_collision">
+        <pose frame=''>0 0 0.03 0 -0 0</pose>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="sea_plane_visual">
+        <pose frame=''>0 0 0.03 0 -0 0</pose>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0 0 1 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+    </link>
+  </model>
+</sdf>

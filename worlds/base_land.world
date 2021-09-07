@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="base_land_world">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <!-- DRONEPONTOS -->
+      <static>true</static>
+      <uri>model://base_land</uri>
+      <name>base_land</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
