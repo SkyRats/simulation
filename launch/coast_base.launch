@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+    <arg name="vehicle" value="iris" />
+    <arg name="sdf" value="$(find simulation)/models/iris_fpv_cam/model.sdf" />
+    <arg name="world" value="$(find simulation)/worlds/coast_base.world" />
+    <arg name="z" value="0.5" />
+  </include>
+</launch>

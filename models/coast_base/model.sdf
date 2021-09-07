@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="coast_base">
+    <static>true</static>
+    <link name="coast_base_link">
+      <visual name="visual_coast_base">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://coast_base/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://coast_base/materials/scripts</uri>
+            <uri>file://coast_base/materials/textures</uri>
+            <name>coast_base</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_coast_base">
+        <geometry>
+          <mesh>
+            <uri>model://coast_base/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,14 @@
+material coast_base
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture coast_base.jpeg
+      }
+    }
+  }
+}
