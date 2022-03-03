@@ -34,7 +34,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 find_package (Qt5Widgets REQUIRED)
 find_package (Qt5Core REQUIRED)
 find_package (Protobuf REQUIRED)
-find_package (ignition-transport4 REQUIRED)
+find_package (ignition-transport8 REQUIRED)
 
 # Find Boost
 find_package(Boost REQUIRED COMPONENTS thread)
@@ -197,7 +197,7 @@ target_link_libraries(skyrats_interface ${GAZEBO_LIBRARIES}
     ${Qt5Core_LIBRARIES}
     ${Qt5Widgets_LIBRARIES}
     ${PROTOBUF_LIBRARIES}
-    ignition-transport4::ignition-transport4
+    ignition-transport8::ignition-transport8
     )
 
 
