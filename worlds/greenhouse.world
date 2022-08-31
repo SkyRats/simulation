@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="cbr_2022_world">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include> <!-- Pillar -->
+      <static>true</static>
+      <uri>model://Greenhouse_Base</uri>
+      <name>Greenhouse_Base</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+   <include> 
+      <static>true</static>
+      <uri>model://Greenhouse_Board</uri>
+      <name>Greenhouse_Board</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include> 
+      <static>true</static>
+      <uri>model://Greenhouse_Floor</uri>
+      <name>Greenhouse_Floor</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include> 
+      <static>true</static>
+      <uri>model://Greenhouse_Wall</uri>
+      <name>Greenhouse_Wall</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include> 
+     <include> 
+      <static>true</static>
+      <uri>model://Greenhouse_Plants</uri>
+      <name>Greenhouse_Plants</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include> 
+  </world>
+</sdf>

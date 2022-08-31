@@ -1,0 +1,14 @@
+material parede_greenhouse/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+      texture vidro.jpg
+      }
+    }
+  }
+}

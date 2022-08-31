@@ -1,0 +1,29 @@
+  <?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="parede_greenhouse">
+    <static>true</static>
+    <link name="parede_greenhouse_link">
+      <visual name="visual_parede_greenhouse">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Wall/meshes/parede_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+  <script>
+    <name>Gazebo/BlueTransparent</name>
+    <uri>file://media/materials/scripts/gazebo.material</uri>
+  </script>
+</material>
+      </visual>
+      <collision name="collision_parede_greenhouse">
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Wall/meshes/parede_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

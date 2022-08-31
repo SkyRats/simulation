@@ -1,0 +1,14 @@
+material placas_greenhouse/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+      texture vermelho.jpg
+      }
+    }
+  }
+}

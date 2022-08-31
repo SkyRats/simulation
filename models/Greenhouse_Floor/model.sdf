@@ -1,0 +1,30 @@
+  <?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="chao_greenhouse">
+    <static>true</static>
+    <link name="chao_greenhouse_link">
+      <visual name="visual_chao_greenhouse">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Floor/meshes/chao_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://Greenhouse_Floor/materials/scripts</uri>
+            <uri>model://Greenhouse_Floor/materials/textures</uri> 
+            <name>chao_greenhouse/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_chao_greenhouse">
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Floor/meshes/chao_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

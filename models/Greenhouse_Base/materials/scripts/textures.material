@@ -1,0 +1,14 @@
+material base_greenhouse/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+      texture base.jpg
+      }
+    }
+  }
+}

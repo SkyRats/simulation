@@ -1,6 +1,6 @@
 SIMULATION_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd )"
-FIRMWARE_DIR="$HOME/src/Firmware"
-FIRMWARE_BUILD_DIR="$HOME/src/Firmware/build/px4_sitl_default"
+FIRMWARE_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot"
+FIRMWARE_BUILD_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default"
 
 # Types of drones
 declare -a TYPES_OF_DRONES

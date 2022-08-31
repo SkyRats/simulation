@@ -1,0 +1,30 @@
+  <?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="base_greenhouse">
+    <static>true</static>
+    <link name="base_greenhouse_link">
+      <visual name="visual_base_greenhouse">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Base/meshes/base_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://Greenhouse_Base/materials/scripts</uri>
+            <uri>model://Greenhouse_Base/materials/textures</uri> 
+            <name>base_greenhouse/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_base_greenhouse">
+        <geometry>
+          <mesh>
+            <uri>model://Greenhouse_Base/meshes/base_greenhouse.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

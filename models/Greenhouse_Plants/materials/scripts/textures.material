@@ -1,0 +1,14 @@
+material greenhouse_plants/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+	texture planta.jpg
+      }
+    }
+  }
+}
